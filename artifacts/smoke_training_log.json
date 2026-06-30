@@ -1,0 +1,108 @@
+{
+  "seed": 2026,
+  "episodes": [
+    {
+      "episode": 1,
+      "scenario_id": "train_007",
+      "makespan": 125.89974745289881,
+      "lower_bound": 41.94457904286342,
+      "normalized_return": -3.0015737510261125,
+      "advantage": 0.0,
+      "baseline": -3.0015737510261125
+    },
+    {
+      "episode": 2,
+      "scenario_id": "train_003",
+      "makespan": 138.3616749998615,
+      "lower_bound": 54.83063763891841,
+      "normalized_return": -2.52343727809675,
+      "advantage": 0.47813647292936245,
+      "baseline": -2.953760103733176
+    },
+    {
+      "episode": 3,
+      "scenario_id": "train_006",
+      "makespan": 168.35295317598505,
+      "lower_bound": 59.12842607656449,
+      "normalized_return": -2.8472422546473233,
+      "advantage": 0.10651784908585293,
+      "baseline": -2.9431083188245912
+    },
+    {
+      "episode": 4,
+      "scenario_id": "train_002",
+      "makespan": 221.76491892435814,
+      "lower_bound": 65.60384810086201,
+      "normalized_return": -3.380364496049192,
+      "advantage": -0.43725617722460086,
+      "baseline": -2.9868339365470513
+    },
+    {
+      "episode": 5,
+      "scenario_id": "train_007",
+      "makespan": 116.56995589113777,
+      "lower_bound": 41.94457904286342,
+      "normalized_return": -2.7791423480973365,
+      "advantage": 0.2076915884497148,
+      "baseline": -2.96606477770208
+    },
+    {
+      "episode": 6,
+      "scenario_id": "train_004",
+      "makespan": 84.08002783255137,
+      "lower_bound": 52.920752937658044,
+      "normalized_return": -1.5887912239570687,
+      "advantage": 1.3772735537450111,
+      "baseline": -2.8283374223275786
+    },
+    {
+      "episode": 7,
+      "scenario_id": "train_002",
+      "makespan": 86.46345990666569,
+      "lower_bound": 65.60384810086201,
+      "normalized_return": -1.31796323553663,
+      "advantage": 1.5103741867909486,
+      "baseline": -2.677300003648484
+    },
+    {
+      "episode": 8,
+      "scenario_id": "train_007",
+      "makespan": 168.96169678907987,
+      "lower_bound": 41.94457904286342,
+      "normalized_return": -4.028212957302943,
+      "advantage": -1.3509129536544586,
+      "baseline": -2.81239129901393
+    },
+    {
+      "episode": 9,
+      "scenario_id": "train_005",
+      "makespan": 138.91071293103778,
+      "lower_bound": 38.03138467018359,
+      "normalized_return": -3.6525284087261505,
+      "advantage": -0.8401371097122206,
+      "baseline": -2.896405009985152
+    },
+    {
+      "episode": 10,
+      "scenario_id": "train_006",
+      "makespan": 116.71926204766791,
+      "lower_bound": 59.12842607656449,
+      "normalized_return": -1.9739957545382645,
+      "advantage": 0.9224092554468875,
+      "baseline": -2.804164084440463
+    }
+  ],
+  "behavior_cloning": {
+    "bc_updates": 59,
+    "bc_match_rate": 0.3898305084745763
+  },
+  "hyperparameters": {
+    "episodes": 10,
+    "bc_epochs": 1,
+    "hidden_size": 32,
+    "learning_rate": 0.018,
+    "bc_learning_rate": 0.03,
+    "baseline_momentum": 0.9,
+    "advantage_clip": 3.0
+  }
+}

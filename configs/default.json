@@ -1,0 +1,53 @@
+{
+  "seed": 2026,
+  "paths": {
+    "artifact_dir": "artifacts",
+    "scenario_dir": "artifacts/scenarios",
+    "model_dir": "artifacts/models",
+    "result_dir": "results"
+  },
+  "scenario": {
+    "train_count": 24,
+    "val_count": 10,
+    "task_min": 8,
+    "task_max": 14,
+    "edge_probability": 0.24,
+    "work_range": [20.0, 120.0],
+    "data_range": [2.0, 30.0]
+  },
+  "resources": {
+    "counts": {
+      "cloud": 1,
+      "edge": 2,
+      "device": 2
+    },
+    "speed_ranges": {
+      "cloud": [5.0, 8.0],
+      "edge": [2.2, 4.5],
+      "device": [0.8, 2.0]
+    },
+    "bandwidth_by_kind": {
+      "cloud-cloud": 120.0,
+      "cloud-edge": 55.0,
+      "cloud-device": 18.0,
+      "edge-cloud": 55.0,
+      "edge-edge": 80.0,
+      "edge-device": 28.0,
+      "device-cloud": 18.0,
+      "device-edge": 28.0,
+      "device-device": 16.0
+    }
+  },
+  "training": {
+    "episodes": 80,
+    "bc_epochs": 3,
+    "hidden_size": 32,
+    "learning_rate": 0.018,
+    "bc_learning_rate": 0.03,
+    "baseline_momentum": 0.9,
+    "advantage_clip": 3.0
+  },
+  "evaluation": {
+    "policies": ["heft", "random", "rl"]
+  }
+}

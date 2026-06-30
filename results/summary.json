@@ -1,0 +1,272 @@
+{
+  "summary": {
+    "heft": {
+      "count": 10,
+      "mean_makespan": 82.62259681067576,
+      "std_makespan": 16.771771124655658,
+      "mean_ratio": 1.0,
+      "std_ratio": 0.0
+    },
+    "random": {
+      "count": 10,
+      "mean_makespan": 371.95972517240386,
+      "std_makespan": 121.13992758508671,
+      "mean_ratio": 4.687611178548205,
+      "std_ratio": 1.9906102051690069
+    },
+    "rl": {
+      "count": 10,
+      "mean_makespan": 96.38341249988842,
+      "std_makespan": 25.32454533305839,
+      "mean_ratio": 1.1570665892700345,
+      "std_ratio": 0.08607734116231314
+    }
+  },
+  "ranked_policies": [
+    "heft",
+    "rl",
+    "random"
+  ],
+  "records": [
+    {
+      "scenario_id": "val_000",
+      "policy": "heft",
+      "makespan": 79.58407300962179,
+      "heft_makespan": 79.58407300962179,
+      "ratio_to_heft": 1.0,
+      "steps": 11
+    },
+    {
+      "scenario_id": "val_001",
+      "policy": "heft",
+      "makespan": 100.66332242677494,
+      "heft_makespan": 100.66332242677494,
+      "ratio_to_heft": 1.0,
+      "steps": 12
+    },
+    {
+      "scenario_id": "val_002",
+      "policy": "heft",
+      "makespan": 61.78868175946538,
+      "heft_makespan": 61.78868175946538,
+      "ratio_to_heft": 1.0,
+      "steps": 9
+    },
+    {
+      "scenario_id": "val_003",
+      "policy": "heft",
+      "makespan": 91.55093011690428,
+      "heft_makespan": 91.55093011690428,
+      "ratio_to_heft": 1.0,
+      "steps": 11
+    },
+    {
+      "scenario_id": "val_004",
+      "policy": "heft",
+      "makespan": 64.30679139241461,
+      "heft_makespan": 64.30679139241461,
+      "ratio_to_heft": 1.0,
+      "steps": 9
+    },
+    {
+      "scenario_id": "val_005",
+      "policy": "heft",
+      "makespan": 108.09022541189509,
+      "heft_makespan": 108.09022541189509,
+      "ratio_to_heft": 1.0,
+      "steps": 12
+    },
+    {
+      "scenario_id": "val_006",
+      "policy": "heft",
+      "makespan": 80.93177377957683,
+      "heft_makespan": 80.93177377957683,
+      "ratio_to_heft": 1.0,
+      "steps": 11
+    },
+    {
+      "scenario_id": "val_007",
+      "policy": "heft",
+      "makespan": 98.55507283875329,
+      "heft_makespan": 98.55507283875329,
+      "ratio_to_heft": 1.0,
+      "steps": 10
+    },
+    {
+      "scenario_id": "val_008",
+      "policy": "heft",
+      "makespan": 78.81879514349355,
+      "heft_makespan": 78.81879514349355,
+      "ratio_to_heft": 1.0,
+      "steps": 11
+    },
+    {
+      "scenario_id": "val_009",
+      "policy": "heft",
+      "makespan": 61.93630222785779,
+      "heft_makespan": 61.93630222785779,
+      "ratio_to_heft": 1.0,
+      "steps": 8
+    },
+    {
+      "scenario_id": "val_000",
+      "policy": "random",
+      "makespan": 456.57788183592345,
+      "heft_makespan": 79.58407300962179,
+      "ratio_to_heft": 5.737050952151227,
+      "steps": 11
+    },
+    {
+      "scenario_id": "val_001",
+      "policy": "random",
+      "makespan": 237.56952391990754,
+      "heft_makespan": 100.66332242677494,
+      "ratio_to_heft": 2.360040560877788,
+      "steps": 12
+    },
+    {
+      "scenario_id": "val_002",
+      "policy": "random",
+      "makespan": 286.09522920120304,
+      "heft_makespan": 61.78868175946538,
+      "ratio_to_heft": 4.630220633528506,
+      "steps": 9
+    },
+    {
+      "scenario_id": "val_003",
+      "policy": "random",
+      "makespan": 394.26759111348565,
+      "heft_makespan": 91.55093011690428,
+      "ratio_to_heft": 4.306538345487401,
+      "steps": 11
+    },
+    {
+      "scenario_id": "val_004",
+      "policy": "random",
+      "makespan": 297.1842268041237,
+      "heft_makespan": 64.30679139241461,
+      "ratio_to_heft": 4.621350566079999,
+      "steps": 9
+    },
+    {
+      "scenario_id": "val_005",
+      "policy": "random",
+      "makespan": 427.2868350273057,
+      "heft_makespan": 108.09022541189509,
+      "ratio_to_heft": 3.9530571187085686,
+      "steps": 12
+    },
+    {
+      "scenario_id": "val_006",
+      "policy": "random",
+      "makespan": 346.24884201599406,
+      "heft_makespan": 80.93177377957683,
+      "ratio_to_heft": 4.278280653517199,
+      "steps": 11
+    },
+    {
+      "scenario_id": "val_007",
+      "policy": "random",
+      "makespan": 482.0182570611271,
+      "heft_makespan": 98.55507283875329,
+      "ratio_to_heft": 4.890851816930427,
+      "steps": 10
+    },
+    {
+      "scenario_id": "val_008",
+      "policy": "random",
+      "makespan": 200.74729885214558,
+      "heft_makespan": 78.81879514349355,
+      "ratio_to_heft": 2.546947063662609,
+      "steps": 11
+    },
+    {
+      "scenario_id": "val_009",
+      "policy": "random",
+      "makespan": 591.6015658928227,
+      "heft_makespan": 61.93630222785779,
+      "ratio_to_heft": 9.551774074538331,
+      "steps": 8
+    },
+    {
+      "scenario_id": "val_000",
+      "policy": "rl",
+      "makespan": 87.03535367622447,
+      "heft_makespan": 79.58407300962179,
+      "ratio_to_heft": 1.0936277873802942,
+      "steps": 11
+    },
+    {
+      "scenario_id": "val_001",
+      "policy": "rl",
+      "makespan": 118.25479954271297,
+      "heft_makespan": 100.66332242677494,
+      "ratio_to_heft": 1.1747555782170265,
+      "steps": 12
+    },
+    {
+      "scenario_id": "val_002",
+      "policy": "rl",
+      "makespan": 67.51234901236322,
+      "heft_makespan": 61.78868175946538,
+      "ratio_to_heft": 1.0926329400452215,
+      "steps": 9
+    },
+    {
+      "scenario_id": "val_003",
+      "policy": "rl",
+      "makespan": 108.6175026256777,
+      "heft_makespan": 91.55093011690428,
+      "ratio_to_heft": 1.186416156416768,
+      "steps": 11
+    },
+    {
+      "scenario_id": "val_004",
+      "policy": "rl",
+      "makespan": 77.7460535993814,
+      "heft_makespan": 64.30679139241461,
+      "ratio_to_heft": 1.2089866702407428,
+      "steps": 9
+    },
+    {
+      "scenario_id": "val_005",
+      "policy": "rl",
+      "makespan": 147.6227750290749,
+      "heft_makespan": 108.09022541189509,
+      "ratio_to_heft": 1.3657365822537115,
+      "steps": 12
+    },
+    {
+      "scenario_id": "val_006",
+      "policy": "rl",
+      "makespan": 87.51142211382529,
+      "heft_makespan": 80.93177377957683,
+      "ratio_to_heft": 1.0812987041673963,
+      "steps": 11
+    },
+    {
+      "scenario_id": "val_007",
+      "policy": "rl",
+      "makespan": 113.97825601429392,
+      "heft_makespan": 98.55507283875329,
+      "ratio_to_heft": 1.1564930422280202,
+      "steps": 10
+    },
+    {
+      "scenario_id": "val_008",
+      "policy": "rl",
+      "makespan": 86.98614633895119,
+      "heft_makespan": 78.81879514349355,
+      "ratio_to_heft": 1.1036218731913952,
+      "steps": 11
+    },
+    {
+      "scenario_id": "val_009",
+      "policy": "rl",
+      "makespan": 68.56946704637917,
+      "heft_makespan": 61.93630222785779,
+      "ratio_to_heft": 1.10709655855977,
+      "steps": 8
+    }
+  ]
+}
