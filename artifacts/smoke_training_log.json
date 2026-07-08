@@ -22,11 +22,11 @@
     {
       "episode": 3,
       "scenario_id": "train_006",
-      "makespan": 168.35295317598505,
+      "makespan": 205.63543597471056,
       "lower_bound": 59.12842607656449,
-      "normalized_return": -2.8472422546473233,
-      "advantage": 0.10651784908585293,
-      "baseline": -2.9431083188245912
+      "normalized_return": -3.4777762511120525,
+      "advantage": -0.5240161473788763,
+      "baseline": -3.006161718471064
     },
     {
       "episode": 4,
@@ -34,8 +34,8 @@
       "makespan": 221.76491892435814,
       "lower_bound": 65.60384810086201,
       "normalized_return": -3.380364496049192,
-      "advantage": -0.43725617722460086,
-      "baseline": -2.9868339365470513
+      "advantage": -0.37420277757812803,
+      "baseline": -3.043581996228877
     },
     {
       "episode": 5,
@@ -43,8 +43,8 @@
       "makespan": 116.56995589113777,
       "lower_bound": 41.94457904286342,
       "normalized_return": -2.7791423480973365,
-      "advantage": 0.2076915884497148,
-      "baseline": -2.96606477770208
+      "advantage": 0.2644396481315403,
+      "baseline": -3.0171380314157226
     },
     {
       "episode": 6,
@@ -52,8 +52,8 @@
       "makespan": 84.08002783255137,
       "lower_bound": 52.920752937658044,
       "normalized_return": -1.5887912239570687,
-      "advantage": 1.3772735537450111,
-      "baseline": -2.8283374223275786
+      "advantage": 1.4283468074586538,
+      "baseline": -2.874303350669857
     },
     {
       "episode": 7,
@@ -61,8 +61,8 @@
       "makespan": 86.46345990666569,
       "lower_bound": 65.60384810086201,
       "normalized_return": -1.31796323553663,
-      "advantage": 1.5103741867909486,
-      "baseline": -2.677300003648484
+      "advantage": 1.556340115133227,
+      "baseline": -2.718669339156534
     },
     {
       "episode": 8,
@@ -70,17 +70,17 @@
       "makespan": 168.96169678907987,
       "lower_bound": 41.94457904286342,
       "normalized_return": -4.028212957302943,
-      "advantage": -1.3509129536544586,
-      "baseline": -2.81239129901393
+      "advantage": -1.3095436181464084,
+      "baseline": -2.849623700971175
     },
     {
       "episode": 9,
       "scenario_id": "train_005",
-      "makespan": 138.91071293103778,
+      "makespan": 101.74547457660825,
       "lower_bound": 38.03138467018359,
-      "normalized_return": -3.6525284087261505,
-      "advantage": -0.8401371097122206,
-      "baseline": -2.896405009985152
+      "normalized_return": -2.675302923071748,
+      "advantage": 0.1743207778994269,
+      "baseline": -2.8321916231812323
     },
     {
       "episode": 10,
@@ -88,17 +88,21 @@
       "makespan": 116.71926204766791,
       "lower_bound": 59.12842607656449,
       "normalized_return": -1.9739957545382645,
-      "advantage": 0.9224092554468875,
-      "baseline": -2.804164084440463
+      "advantage": 0.8581958686429678,
+      "baseline": -2.7463720363169353
     }
   ],
   "behavior_cloning": {
+    "bc_teacher": "lookahead_heft",
     "bc_updates": 59,
-    "bc_match_rate": 0.3898305084745763
+    "bc_match_rate": 1.0
   },
   "hyperparameters": {
     "episodes": 10,
     "bc_epochs": 1,
+    "teacher_policy": "lookahead_heft",
+    "inference_mode": "rollout_safe",
+    "rollout_top_k": 4,
     "hidden_size": 32,
     "learning_rate": 0.018,
     "bc_learning_rate": 0.03,

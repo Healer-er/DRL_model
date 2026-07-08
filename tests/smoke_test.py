@@ -26,10 +26,13 @@ def main():
     model_path = os.path.join(config["paths"]["model_dir"], "smoke_rl_policy.json")
     log_path = os.path.join(config["paths"]["artifact_dir"], "smoke_training_log.json")
     train_rl(config, train, model_path, log_path)
-    payload = evaluate(val, ["heft", "rl"], model_path, config["paths"]["result_dir"], seed=config["seed"])
+    payload = evaluate(val, ["heft", "lookahead_heft", "rl"], model_path, config["paths"]["result_dir"], seed=config["seed"])
     assert "heft" in payload["summary"]
+    assert "lookahead_heft" in payload["summary"]
     assert "rl" in payload["summary"]
     assert payload["summary"]["heft"]["mean_ratio"] == 1.0
+    assert payload["summary"]["lookahead_heft"]["mean_ratio"] <= 1.0
+    assert payload["summary"]["rl"]["mean_ratio"] <= 1.0
     print("smoke test passed")
 
 

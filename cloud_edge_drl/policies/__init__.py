@@ -4,8 +4,20 @@
 """
 
 from .base import Scheduler
+from .classic import MaxMinScheduler, MinMinScheduler
 from .heft import HEFTScheduler
+from .lookahead_heft import LookaheadHEFTScheduler
+from .portfolio import PortfolioScheduler
 from .random_policy import RandomScheduler
 from .rl_policy import MLPActorScheduler
 
-__all__ = ["Scheduler", "HEFTScheduler", "RandomScheduler", "MLPActorScheduler"]
+__all__ = [
+    "Scheduler",
+    "HEFTScheduler",
+    "LookaheadHEFTScheduler",
+    "MinMinScheduler",
+    "MaxMinScheduler",
+    "PortfolioScheduler",
+    "RandomScheduler",
+    "MLPActorScheduler",
+]

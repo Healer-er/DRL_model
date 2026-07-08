@@ -4,731 +4,735 @@
     {
       "episode": 1,
       "scenario_id": "train_015",
-      "makespan": 117.80928722283636,
+      "makespan": 143.32390206016916,
       "lower_bound": 103.27447233871679,
-      "normalized_return": -1.140739667363767,
+      "normalized_return": -1.3877960236882096,
       "advantage": 0.0,
-      "baseline": -1.140739667363767
+      "baseline": -1.3877960236882094
     },
     {
       "episode": 2,
       "scenario_id": "train_019",
-      "makespan": 76.61933735660187,
+      "makespan": 82.13476118092444,
       "lower_bound": 40.01580561203488,
-      "normalized_return": -1.9147268481721724,
-      "advantage": -0.7739871808084053,
-      "baseline": -1.2181383854446077
+      "normalized_return": -2.052557981144884,
+      "advantage": -0.6647619574566748,
+      "baseline": -1.454272219433877
     },
     {
       "episode": 3,
       "scenario_id": "train_007",
-      "makespan": 97.95538425234014,
+      "makespan": 169.50797521193311,
       "lower_bound": 79.72724662663275,
-      "normalized_return": -1.2286312195261275,
-      "advantage": -0.010492834081519797,
-      "baseline": -1.2191876688527596
+      "normalized_return": -2.1260984466922412,
+      "advantage": -0.6718262272583642,
+      "baseline": -1.5214548421597136
     },
     {
       "episode": 4,
       "scenario_id": "train_021",
-      "makespan": 106.78575661268266,
+      "makespan": 145.8466496768854,
       "lower_bound": 81.24522253340493,
-      "normalized_return": -1.314363519267566,
-      "advantage": -0.09517585041480636,
-      "baseline": -1.2287052538942402
+      "normalized_return": -1.7951412418978707,
+      "advantage": -0.2736863997381571,
+      "baseline": -1.5488234821335294
     },
     {
       "episode": 5,
       "scenario_id": "train_021",
-      "makespan": 115.00014343362042,
+      "makespan": 187.78324211548394,
       "lower_bound": 81.24522253340493,
-      "normalized_return": -1.4154696097525827,
-      "advantage": -0.1867643558583425,
-      "baseline": -1.2473816894800744
+      "normalized_return": -2.3113142688270027,
+      "advantage": -0.7624907866934734,
+      "baseline": -1.6250725608028767
     },
     {
       "episode": 6,
       "scenario_id": "train_018",
-      "makespan": 179.08901880903753,
+      "makespan": 158.53028252274552,
       "lower_bound": 142.3308852108963,
-      "normalized_return": -1.258258308052223,
-      "advantage": -0.0108766185721485,
-      "baseline": -1.2484693513372893
+      "normalized_return": -1.1138150534779998,
+      "advantage": 0.5112575073248768,
+      "baseline": -1.573946810070389
     },
     {
       "episode": 7,
       "scenario_id": "train_017",
-      "makespan": 88.47126955648385,
+      "makespan": 80.02935498253285,
       "lower_bound": 46.50296625801874,
-      "normalized_return": -1.9024865868901064,
-      "advantage": -0.6540172355528171,
-      "baseline": -1.313871074892571
+      "normalized_return": -1.720951617118252,
+      "advantage": -0.1470048070478629,
+      "baseline": -1.5886472907751754
     },
     {
       "episode": 8,
       "scenario_id": "train_022",
-      "makespan": 140.4566072858967,
+      "makespan": 165.81290054137244,
       "lower_bound": 125.68567151307616,
-      "normalized_return": -1.1175228297307047,
-      "advantage": 0.19634824516186633,
-      "baseline": -1.2942362503763845
+      "normalized_return": -1.3192665364732645,
+      "advantage": 0.2693807543019109,
+      "baseline": -1.5617092153449843
     },
     {
       "episode": 9,
       "scenario_id": "train_017",
-      "makespan": 96.49731755933173,
+      "makespan": 103.7099477873779,
       "lower_bound": 46.50296625801874,
-      "normalized_return": -2.0750787600068894,
-      "advantage": -0.7808425096305049,
-      "baseline": -1.372320501339435
+      "normalized_return": -2.230179193558318,
+      "advantage": -0.6684699782133336,
+      "baseline": -1.6285562131663176
     },
     {
       "episode": 10,
       "scenario_id": "train_020",
-      "makespan": 87.2138201557145,
+      "makespan": 70.68627295599975,
       "lower_bound": 52.594021745721086,
-      "normalized_return": -1.658245885385443,
-      "advantage": -0.28592538404600787,
-      "baseline": -1.400913039744036
+      "normalized_return": -1.3439982456133546,
+      "advantage": 0.28455796755296303,
+      "baseline": -1.6001004164110213
     },
     {
       "episode": 11,
       "scenario_id": "train_013",
-      "makespan": 138.87757787530435,
+      "makespan": 130.08013616695422,
       "lower_bound": 62.247827609048805,
-      "normalized_return": -2.2310429650257557,
-      "advantage": -0.8301299252817198,
-      "baseline": -1.4839260322722079
+      "normalized_return": -2.089713668144859,
+      "advantage": -0.48961325173383785,
+      "baseline": -1.649061741584405
     },
     {
       "episode": 12,
       "scenario_id": "train_004",
-      "makespan": 98.8038160907999,
+      "makespan": 124.81847034736751,
       "lower_bound": 63.48008949834726,
-      "normalized_return": -1.5564536356454304,
-      "advantage": -0.0725276033732225,
-      "baseline": -1.4911787926095301
+      "normalized_return": -1.9662617260584867,
+      "advantage": -0.3171999844740816,
+      "baseline": -1.6807817400318132
     },
     {
       "episode": 13,
       "scenario_id": "train_020",
-      "makespan": 87.85347782158212,
+      "makespan": 74.38302656897734,
       "lower_bound": 52.594021745721086,
-      "normalized_return": -1.670408059804433,
-      "advantage": -0.17922926719490295,
-      "baseline": -1.5091017193290206
+      "normalized_return": -1.4142867211904926,
+      "advantage": 0.26649501884132065,
+      "baseline": -1.654132238147681
     },
     {
       "episode": 14,
       "scenario_id": "train_014",
-      "makespan": 85.11358368690925,
+      "makespan": 122.22176062735304,
       "lower_bound": 76.12361910693497,
-      "normalized_return": -1.1180969150631894,
-      "advantage": 0.3910048042658312,
-      "baseline": -1.4700012389024375
+      "normalized_return": -1.6055694942152121,
+      "advantage": 0.048562743932468955,
+      "baseline": -1.649275963754434
     },
     {
       "episode": 15,
       "scenario_id": "train_008",
-      "makespan": 104.80381429665204,
+      "makespan": 115.30139767993047,
       "lower_bound": 56.90773834193919,
-      "normalized_return": -1.8416443413533967,
-      "advantage": -0.3716431024509592,
-      "baseline": -1.5071655491475335
+      "normalized_return": -2.0261110534234152,
+      "advantage": -0.37683508966898116,
+      "baseline": -1.6869594727213322
     },
     {
       "episode": 16,
       "scenario_id": "train_016",
-      "makespan": 54.52988410831744,
+      "makespan": 49.96520402061562,
       "lower_bound": 38.73610601529097,
-      "normalized_return": -1.4077275626721983,
-      "advantage": 0.0994379864753352,
-      "baseline": -1.4972217505
+      "normalized_return": -1.2898871146442028,
+      "advantage": 0.3970723580771294,
+      "baseline": -1.6472522369136193
     },
     {
       "episode": 17,
       "scenario_id": "train_004",
-      "makespan": 92.95189302983455,
+      "makespan": 90.9516841432532,
       "lower_bound": 63.48008949834726,
-      "normalized_return": -1.4642684621963964,
-      "advantage": 0.03295328830360367,
-      "baseline": -1.4939264216696397
+      "normalized_return": -1.432759229893984,
+      "advantage": 0.21449300701963536,
+      "baseline": -1.6258029362116557
     },
     {
       "episode": 18,
       "scenario_id": "train_022",
-      "makespan": 133.2029092175095,
+      "makespan": 162.19280653757195,
       "lower_bound": 125.68567151307616,
-      "normalized_return": -1.0598098225035242,
-      "advantage": 0.43411659916611556,
-      "baseline": -1.450514761753028
+      "normalized_return": -1.2904637782891397,
+      "advantage": 0.335339157922516,
+      "baseline": -1.592269020419404
     },
     {
       "episode": 19,
       "scenario_id": "train_014",
-      "makespan": 99.74303018309486,
+      "makespan": 98.91357269774093,
       "lower_bound": 76.12361910693497,
-      "normalized_return": -1.3102770382340916,
-      "advantage": 0.14023772351893649,
-      "baseline": -1.4364909894011344
+      "normalized_return": -1.2993808473397945,
+      "advantage": 0.29288817307960957,
+      "baseline": -1.5629802031114433
     },
     {
       "episode": 20,
       "scenario_id": "train_011",
-      "makespan": 86.50413876733272,
+      "makespan": 87.91370389252043,
       "lower_bound": 60.027302081502064,
-      "normalized_return": -1.4410799047720275,
-      "advantage": -0.004588915370893121,
-      "baseline": -1.4369498809382237
+      "normalized_return": -1.4645619717034026,
+      "advantage": 0.09841823140804062,
+      "baseline": -1.553138379970639
     },
     {
       "episode": 21,
       "scenario_id": "train_013",
-      "makespan": 110.34565846665693,
+      "makespan": 132.346898179629,
       "lower_bound": 62.247827609048805,
-      "normalized_return": -1.7726828823599985,
-      "advantage": -0.33573300142177476,
-      "baseline": -1.4705231810804011
+      "normalized_return": -2.1261287865472442,
+      "advantage": -0.5729904065766052,
+      "baseline": -1.6104374206282996
     },
     {
       "episode": 22,
       "scenario_id": "train_020",
-      "makespan": 96.35235139985184,
+      "makespan": 71.84222279636843,
       "lower_bound": 52.594021745721086,
-      "normalized_return": -1.832001969077233,
-      "advantage": -0.36147878799683175,
-      "baseline": -1.5066710598800843
+      "normalized_return": -1.3659769763131553,
+      "advantage": 0.24446044431514435,
+      "baseline": -1.5859913761967852
     },
     {
       "episode": 23,
       "scenario_id": "train_008",
-      "makespan": 96.04398969861488,
+      "makespan": 99.74002650705327,
       "lower_bound": 56.90773834193919,
-      "normalized_return": -1.6877140525515055,
-      "advantage": -0.1810429926714212,
-      "baseline": -1.5247753591472264
+      "normalized_return": -1.7526619298723396,
+      "advantage": -0.1666705536755544,
+      "baseline": -1.6026584315643406
     },
     {
       "episode": 24,
       "scenario_id": "train_017",
-      "makespan": 84.72811698097838,
+      "makespan": 98.84649788909172,
       "lower_bound": 46.50296625801874,
-      "normalized_return": -1.821993816714182,
-      "advantage": -0.29721845756695564,
-      "baseline": -1.554497204903922
+      "normalized_return": -2.125595544607805,
+      "advantage": -0.5229371130434646,
+      "baseline": -1.654952142868687
     },
     {
       "episode": 25,
       "scenario_id": "train_003",
-      "makespan": 77.66339996468686,
+      "makespan": 84.33958546866998,
       "lower_bound": 47.30654708054567,
-      "normalized_return": -1.641705107592288,
-      "advantage": -0.08720790268836587,
-      "baseline": -1.5632179951727587
+      "normalized_return": -1.7828311443883371,
+      "advantage": -0.12787900151965004,
+      "baseline": -1.6677400430206522
     },
     {
       "episode": 26,
       "scenario_id": "train_014",
-      "makespan": 95.49768866638743,
+      "makespan": 98.00943731296466,
       "lower_bound": 76.12361910693497,
-      "normalized_return": -1.2545079935339998,
-      "advantage": 0.30871000163875895,
-      "baseline": -1.5323469950088828
+      "normalized_return": -1.2875036481815914,
+      "advantage": 0.3802363948390608,
+      "baseline": -1.6297164035367462
     },
     {
       "episode": 27,
       "scenario_id": "train_008",
-      "makespan": 112.18290526901929,
+      "makespan": 99.7082449211987,
       "lower_bound": 56.90773834193919,
-      "normalized_return": -1.9713119610368361,
-      "advantage": -0.4389649660279533,
-      "baseline": -1.5762434916116783
+      "normalized_return": -1.7521034542277163,
+      "advantage": -0.12238705069097011,
+      "baseline": -1.6419551086058433
     },
     {
       "episode": 28,
       "scenario_id": "train_008",
-      "makespan": 89.4974594556971,
+      "makespan": 95.63551546161528,
       "lower_bound": 56.90773834193919,
-      "normalized_return": -1.572676441961854,
-      "advantage": 0.00356704964982435,
-      "baseline": -1.575886786646696
+      "normalized_return": -1.680536219643348,
+      "advantage": -0.03858111103750472,
+      "baseline": -1.6458132197095936
     },
     {
       "episode": 29,
       "scenario_id": "train_010",
-      "makespan": 85.06126317884184,
+      "makespan": 78.61100924216346,
       "lower_bound": 50.66821393986274,
-      "normalized_return": -1.6787894532812946,
-      "advantage": -0.10290266663459868,
-      "baseline": -1.5861770533101556
+      "normalized_return": -1.5514856974328237,
+      "advantage": 0.09432752227676988,
+      "baseline": -1.6363804674819167
     },
     {
       "episode": 30,
       "scenario_id": "train_014",
-      "makespan": 87.92730930690742,
+      "makespan": 99.79103640367879,
       "lower_bound": 76.12361910693497,
-      "normalized_return": -1.1550594984638232,
-      "advantage": 0.4311175548463324,
-      "baseline": -1.5430652978255224
+      "normalized_return": -1.310907673261001,
+      "advantage": 0.3254727942209157,
+      "baseline": -1.603833188059825
     },
     {
       "episode": 31,
       "scenario_id": "train_001",
-      "makespan": 118.4656419784125,
+      "makespan": 171.79275485953806,
       "lower_bound": 82.65891633747557,
-      "normalized_return": -1.4331864876469838,
-      "advantage": 0.10987881017853862,
-      "baseline": -1.5320774168076685
+      "normalized_return": -2.078333015619893,
+      "advantage": -0.47449982756006803,
+      "baseline": -1.651283170815832
     },
     {
       "episode": 32,
       "scenario_id": "train_002",
-      "makespan": 54.75485168711222,
+      "makespan": 65.56486853477244,
       "lower_bound": 47.037180636269234,
-      "normalized_return": -1.1640759702526065,
-      "advantage": 0.36800144655506206,
-      "baseline": -1.4952772721521623
+      "normalized_return": -1.3938945244566159,
+      "advantage": 0.2573886463592161,
+      "baseline": -1.6255443061799104
     },
     {
       "episode": 33,
       "scenario_id": "train_021",
-      "makespan": 125.97057822122495,
+      "makespan": 127.34299653482229,
       "lower_bound": 81.24522253340493,
-      "normalized_return": -1.550498285230626,
-      "advantage": -0.05522101307846361,
-      "baseline": -1.5007993734600087
+      "normalized_return": -1.5673905808118591,
+      "advantage": 0.0581537253680513,
+      "baseline": -1.6197289336431053
     },
     {
       "episode": 34,
       "scenario_id": "train_001",
-      "makespan": 125.73242234432821,
+      "makespan": 113.91569007899521,
       "lower_bound": 82.65891633747557,
-      "normalized_return": -1.521099331026726,
-      "advantage": -0.02029995756671732,
-      "baseline": -1.5028293692166803
+      "normalized_return": -1.3781415862495232,
+      "advantage": 0.24158734739358212,
+      "baseline": -1.5955701989037472
     },
     {
       "episode": 35,
       "scenario_id": "train_017",
-      "makespan": 92.08134865026736,
+      "makespan": 106.54217653625703,
       "lower_bound": 46.50296625801874,
-      "normalized_return": -1.9801177443038769,
-      "advantage": -0.47728837508719657,
-      "baseline": -1.5505582067254
+      "normalized_return": -2.2910834535826075,
+      "advantage": -0.6955132546788603,
+      "baseline": -1.6651215243716333
     },
     {
       "episode": 36,
       "scenario_id": "train_010",
-      "makespan": 74.81848228273073,
+      "makespan": 101.54722490360025,
       "lower_bound": 50.66821393986274,
-      "normalized_return": -1.4766354774520283,
-      "advantage": 0.07392272927337173,
-      "baseline": -1.543165933798063
+      "normalized_return": -2.004160340526804,
+      "advantage": -0.3390388161551705,
+      "baseline": -1.6990254059871504
     },
     {
       "episode": 37,
       "scenario_id": "train_021",
-      "makespan": 134.5683922116673,
+      "makespan": 113.4403425611905,
       "lower_bound": 81.24522253340493,
-      "normalized_return": -1.656323756837984,
-      "advantage": -0.11315782303992106,
-      "baseline": -1.554481716102055
+      "normalized_return": -1.396270931679068,
+      "advantage": 0.30275447430808233,
+      "baseline": -1.6687499585563423
     },
     {
       "episode": 38,
       "scenario_id": "train_023",
-      "makespan": 63.62076373452218,
+      "makespan": 79.33353719500815,
       "lower_bound": 43.22338191293405,
-      "normalized_return": -1.4719061979619061,
-      "advantage": 0.08257551814014885,
-      "baseline": -1.54622416428804
+      "normalized_return": -1.83543104875069,
+      "advantage": -0.16668109019434763,
+      "baseline": -1.685418067575777
     },
     {
       "episode": 39,
       "scenario_id": "train_023",
-      "makespan": 74.33565580458952,
+      "makespan": 102.03889806710038,
       "lower_bound": 43.22338191293405,
-      "normalized_return": -1.7198019339237662,
-      "advantage": -0.17357776963572613,
-      "baseline": -1.5635819412516128
+      "normalized_return": -2.3607337869267124,
+      "advantage": -0.6753157193509354,
+      "baseline": -1.7529496395108706
     },
     {
       "episode": 40,
       "scenario_id": "train_017",
-      "makespan": 72.04189847219541,
+      "makespan": 124.89477618975843,
       "lower_bound": 46.50296625801874,
-      "normalized_return": -1.549189315633664,
-      "advantage": 0.01439262561794874,
-      "baseline": -1.5621426786898178
+      "normalized_return": -2.685737840824771,
+      "advantage": -0.9327882013139006,
+      "baseline": -1.8462284596422607
     },
     {
       "episode": 41,
       "scenario_id": "train_007",
-      "makespan": 117.24483681777002,
+      "makespan": 164.70662908246334,
       "lower_bound": 79.72724662663275,
-      "normalized_return": -1.470574261354268,
-      "advantage": 0.09156841733554977,
-      "baseline": -1.5529858369562628
+      "normalized_return": -2.0658762976450684,
+      "advantage": -0.21964783800280774,
+      "baseline": -1.8681932434425415
     },
     {
       "episode": 42,
       "scenario_id": "train_014",
-      "makespan": 107.16945949807673,
+      "makespan": 126.43091038267508,
       "lower_bound": 76.12361910693497,
-      "normalized_return": -1.4078345296159658,
-      "advantage": 0.14515130734029702,
-      "baseline": -1.5384707062222331
+      "normalized_return": -1.6608631048541023,
+      "advantage": 0.20733013858843918,
+      "baseline": -1.8474602295836975
     },
     {
       "episode": 43,
       "scenario_id": "train_009",
-      "makespan": 106.37124786413466,
+      "makespan": 125.71351103406266,
       "lower_bound": 79.70007395862612,
-      "normalized_return": -1.3346442804978333,
-      "advantage": 0.2038264257243998,
-      "baseline": -1.518088063649793
+      "normalized_return": -1.5773324263076973,
+      "advantage": 0.27012780327600017,
+      "baseline": -1.8204474492560974
     },
     {
       "episode": 44,
       "scenario_id": "train_017",
-      "makespan": 79.89670394387238,
+      "makespan": 78.98563849669833,
       "lower_bound": 46.50296625801874,
-      "normalized_return": -1.7180990885736325,
-      "advantage": -0.20001102492383938,
-      "baseline": -1.5380891661421772
+      "normalized_return": -1.698507533013089,
+      "advantage": 0.12193991624300837,
+      "baseline": -1.8082534576317966
     },
     {
       "episode": 45,
       "scenario_id": "train_018",
-      "makespan": 143.55879279974636,
+      "makespan": 198.9293913007184,
       "lower_bound": 142.3308852108963,
-      "normalized_return": -1.0086271337877974,
-      "advantage": 0.5294620323543797,
-      "baseline": -1.4851429629067394
+      "normalized_return": -1.397654423394882,
+      "advantage": 0.4105990342369146,
+      "baseline": -1.767193554208105
     },
     {
       "episode": 46,
       "scenario_id": "train_002",
-      "makespan": 51.2371872963708,
+      "makespan": 75.85003578292796,
       "lower_bound": 47.037180636269234,
-      "normalized_return": -1.0892912075785224,
-      "advantage": 0.39585175532821704,
-      "baseline": -1.4455577873739178
+      "normalized_return": -1.612554892893428,
+      "advantage": 0.15463866131467707,
+      "baseline": -1.7517296880766373
     },
     {
       "episode": 47,
       "scenario_id": "train_009",
-      "makespan": 120.90963851160957,
+      "makespan": 114.56348463012648,
       "lower_bound": 79.70007395862612,
-      "normalized_return": -1.5170580465756676,
-      "advantage": -0.07150025920174974,
-      "baseline": -1.452707813294093
+      "normalized_return": -1.4374326012495127,
+      "advantage": 0.31429708682712465,
+      "baseline": -1.7202999793939249
     },
     {
       "episode": 48,
       "scenario_id": "train_012",
-      "makespan": 61.681400325428605,
+      "makespan": 74.22728151954078,
       "lower_bound": 46.21572094597524,
-      "normalized_return": -1.3346410931797918,
-      "advantage": 0.11806672011430108,
-      "baseline": -1.440901141282663
+      "normalized_return": -1.6061045895250707,
+      "advantage": 0.11419538986885414,
+      "baseline": -1.7088804404070395
     },
     {
       "episode": 49,
       "scenario_id": "train_011",
-      "makespan": 95.9162956734398,
+      "makespan": 115.96176827604627,
       "lower_bound": 60.027302081502064,
-      "normalized_return": -1.5978778380412544,
-      "advantage": -0.1569766967585915,
-      "baseline": -1.4565988109585222
+      "normalized_return": -1.9318170941382504,
+      "advantage": -0.22293665373121097,
+      "baseline": -1.7311741057801606
     },
     {
       "episode": 50,
       "scenario_id": "train_002",
-      "makespan": 51.2371872963708,
+      "makespan": 70.42740769303815,
       "lower_bound": 47.037180636269234,
-      "normalized_return": -1.0892912075785224,
-      "advantage": 0.3673076033799998,
-      "baseline": -1.4198680506205221
+      "normalized_return": -1.4972710256093298,
+      "advantage": 0.23390308017083083,
+      "baseline": -1.7077837977630776
     },
     {
       "episode": 51,
       "scenario_id": "train_010",
-      "makespan": 87.88135735247745,
+      "makespan": 77.15887082258861,
       "lower_bound": 50.66821393986274,
-      "normalized_return": -1.7344475070067078,
-      "advantage": -0.3145794563861857,
-      "baseline": -1.4513259962591407
+      "normalized_return": -1.5228259459503979,
+      "advantage": 0.18495785181267976,
+      "baseline": -1.6892880125818095
     },
     {
       "episode": 52,
       "scenario_id": "train_023",
-      "makespan": 77.51976762874347,
+      "makespan": 69.90762022427309,
       "lower_bound": 43.22338191293405,
-      "normalized_return": -1.793468354347966,
-      "advantage": -0.3421423580888252,
-      "baseline": -1.485540232068023
+      "normalized_return": -1.6173565586582228,
+      "advantage": 0.07193145392358669,
+      "baseline": -1.682094867189451
     },
     {
       "episode": 53,
       "scenario_id": "train_007",
-      "makespan": 112.68658776635634,
+      "makespan": 121.02591442133004,
       "lower_bound": 79.72724662663275,
-      "normalized_return": -1.413401221467914,
-      "advantage": 0.07213901060010919,
-      "baseline": -1.4783263310080121
+      "normalized_return": -1.517999423560948,
+      "advantage": 0.16409544362850292,
+      "baseline": -1.6656853228266006
     },
     {
       "episode": 54,
       "scenario_id": "train_001",
-      "makespan": 133.26355855075778,
+      "makespan": 168.45951306827834,
       "lower_bound": 82.65891633747557,
-      "normalized_return": -1.612210327155466,
-      "advantage": -0.13388399614745383,
-      "baseline": -1.4917147306227576
+      "normalized_return": -2.038007761685388,
+      "advantage": -0.37232243885878735,
+      "baseline": -1.7029175667124794
     },
     {
       "episode": 55,
       "scenario_id": "train_003",
-      "makespan": 81.30789706226375,
+      "makespan": 81.58115264325288,
       "lower_bound": 47.30654708054567,
-      "normalized_return": -1.718745122611174,
-      "advantage": -0.22703039198841646,
-      "baseline": -1.5144177698215993
+      "normalized_return": -1.7245213966758164,
+      "advantage": -0.021603829963336985,
+      "baseline": -1.705077949708813
     },
     {
       "episode": 56,
       "scenario_id": "train_019",
-      "makespan": 62.15029741878179,
+      "makespan": 66.03743755330815,
       "lower_bound": 40.01580561203488,
-      "normalized_return": -1.5531437257904384,
-      "advantage": -0.0387259559688391,
-      "baseline": -1.5182903654184832
+      "normalized_return": -1.650283845177596,
+      "advantage": 0.054794104531217025,
+      "baseline": -1.6995985392556914
     },
     {
       "episode": 57,
       "scenario_id": "train_010",
-      "makespan": 100.49877966799596,
+      "makespan": 126.10698952720219,
       "lower_bound": 50.66821393986274,
-      "normalized_return": -1.983467974365078,
-      "advantage": -0.4651776089465949,
-      "baseline": -1.5648081263131428
+      "normalized_return": -2.4888777346064828,
+      "advantage": -0.7892791953507914,
+      "baseline": -1.7785264587907705
     },
     {
       "episode": 58,
       "scenario_id": "train_010",
-      "makespan": 85.0876135053836,
+      "makespan": 96.27564158732713,
       "lower_bound": 50.66821393986274,
-      "normalized_return": -1.6793095096340416,
-      "advantage": -0.11450138332089876,
-      "baseline": -1.5762582646452328
+      "normalized_return": -1.9001191102097084,
+      "advantage": -0.12159265141893782,
+      "baseline": -1.7906857239326643
     },
     {
       "episode": 59,
       "scenario_id": "train_020",
-      "makespan": 82.13037917512969,
+      "makespan": 90.41044207277807,
       "lower_bound": 52.594021745721086,
-      "normalized_return": -1.5615915354830534,
-      "advantage": 0.01466672916217937,
-      "baseline": -1.574791591729015
+      "normalized_return": -1.7190250730375762,
+      "advantage": 0.07166065089508811,
+      "baseline": -1.7835196588431557
     },
     {
       "episode": 60,
       "scenario_id": "train_011",
-      "makespan": 82.2971476775452,
+      "makespan": 111.3774024471789,
       "lower_bound": 60.027302081502064,
-      "normalized_return": -1.370995277545645,
-      "advantage": 0.20379631418336985,
-      "baseline": -1.554411960310678
+      "normalized_return": -1.8554457486021316,
+      "advantage": -0.07192608975897596,
+      "baseline": -1.7907122678190532
     },
     {
       "episode": 61,
       "scenario_id": "train_008",
-      "makespan": 94.3955216912287,
+      "makespan": 109.46376959664944,
       "lower_bound": 56.90773834193919,
-      "normalized_return": -1.6587466738537069,
-      "advantage": -0.10433471354302881,
-      "baseline": -1.564845431664981
+      "normalized_return": -1.9235304861162992,
+      "advantage": -0.13281821829724594,
+      "baseline": -1.8039940896487778
     },
     {
       "episode": 62,
       "scenario_id": "train_004",
-      "makespan": 113.07728334145044,
+      "makespan": 103.75509461001454,
       "lower_bound": 63.48008949834726,
-      "normalized_return": -1.7813031493031286,
-      "advantage": -0.2164577176381477,
-      "baseline": -1.5864912034287957
+      "normalized_return": -1.6344509818738655,
+      "advantage": 0.16954310777491233,
+      "baseline": -1.7870397788712866
     },
     {
       "episode": 63,
       "scenario_id": "train_009",
-      "makespan": 103.08510475607889,
+      "makespan": 119.57259808467622,
       "lower_bound": 79.70007395862612,
-      "normalized_return": -1.2934129121334619,
-      "advantage": 0.2930782912953338,
-      "baseline": -1.5571833742992625
+      "normalized_return": -1.5002821471250918,
+      "advantage": 0.28675763174619484,
+      "baseline": -1.7583640156966671
     },
     {
       "episode": 64,
       "scenario_id": "train_001",
-      "makespan": 120.44041459077583,
+      "makespan": 122.302144681905,
       "lower_bound": 82.65891633747557,
-      "normalized_return": -1.4570771058629404,
-      "advantage": 0.10010626843632209,
-      "baseline": -1.5471727474556303
+      "normalized_return": -1.4796001460093682,
+      "advantage": 0.27876386968729894,
+      "baseline": -1.7304876287279372
     },
     {
       "episode": 65,
       "scenario_id": "train_003",
-      "makespan": 80.49425976064887,
+      "makespan": 73.77060535506403,
       "lower_bound": 47.30654708054567,
-      "normalized_return": -1.701545868980814,
-      "advantage": -0.1543731215251838,
-      "baseline": -1.5626100596081487
+      "normalized_return": -1.5594164002174962,
+      "advantage": 0.171071228510441,
+      "baseline": -1.7133805058768932
     },
     {
       "episode": 66,
       "scenario_id": "train_007",
-      "makespan": 109.80356369776045,
+      "makespan": 150.0310392192328,
       "lower_bound": 79.72724662663275,
-      "normalized_return": -1.3772401323725227,
-      "advantage": 0.18536992723562595,
-      "baseline": -1.544073066884586
+      "normalized_return": -1.881803844573195,
+      "advantage": -0.16842333869630188,
+      "baseline": -1.7302228397465234
     },
     {
       "episode": 67,
       "scenario_id": "train_012",
-      "makespan": 59.06820423459369,
+      "makespan": 71.14424777698326,
       "lower_bound": 46.21572094597524,
-      "normalized_return": -1.2780976478467707,
-      "advantage": 0.2659754190378152,
-      "baseline": -1.5174755249808043
+      "normalized_return": -1.5393949574031032,
+      "advantage": 0.19082788234342019,
+      "baseline": -1.7111400515121815
     },
     {
       "episode": 68,
       "scenario_id": "train_021",
-      "makespan": 141.84953118072093,
+      "makespan": 108.32197256763176,
       "lower_bound": 81.24522253340493,
-      "normalized_return": -1.7459430444959128,
-      "advantage": -0.22846751951510846,
-      "baseline": -1.540322276932315
+      "normalized_return": -1.3332719043645171,
+      "advantage": 0.37786814714766437,
+      "baseline": -1.673353236797415
     },
     {
       "episode": 69,
       "scenario_id": "train_018",
-      "makespan": 143.69679033602617,
+      "makespan": 186.99571878269919,
       "lower_bound": 142.3308852108963,
-      "normalized_return": -1.0095966881896783,
-      "advantage": 0.5307255887426368,
-      "baseline": -1.4872497180580513
+      "normalized_return": -1.3138098488295182,
+      "advantage": 0.35954338796789687,
+      "baseline": -1.6373988980006255
     },
     {
       "episode": 70,
       "scenario_id": "train_021",
-      "makespan": 129.43611127298274,
+      "makespan": 125.12585787806337,
       "lower_bound": 81.24522253340493,
-      "normalized_return": -1.59315350782335,
-      "advantage": -0.1059037897652988,
-      "baseline": -1.4978400970345813
+      "normalized_return": -1.5401011158116578,
+      "advantage": 0.09729778218896779,
+      "baseline": -1.6276691197817286
     },
     {
       "episode": 71,
       "scenario_id": "train_014",
-      "makespan": 87.92730930690742,
+      "makespan": 94.99816219568345,
       "lower_bound": 76.12361910693497,
-      "normalized_return": -1.1550594984638232,
-      "advantage": 0.34278059857075815,
-      "baseline": -1.4635620371775055
+      "normalized_return": -1.2479459504182846,
+      "advantage": 0.37972316936344397,
+      "baseline": -1.5896968028453844
     },
     {
       "episode": 72,
       "scenario_id": "train_023",
-      "makespan": 78.7900599944697,
+      "makespan": 90.29256578466197,
       "lower_bound": 43.22338191293405,
-      "normalized_return": -1.822857363479297,
-      "advantage": -0.3592953263017915,
-      "baseline": -1.4994915698076845
+      "normalized_return": -2.0889750359317225,
+      "advantage": -0.4992782330863381,
+      "baseline": -1.6396246261540182
     },
     {
       "episode": 73,
       "scenario_id": "train_008",
-      "makespan": 101.44705227256907,
+      "makespan": 110.58642184312163,
       "lower_bound": 56.90773834193919,
-      "normalized_return": -1.7826583032171888,
-      "advantage": -0.28316673340950427,
-      "baseline": -1.5278082431486348
+      "normalized_return": -1.9432580711369258,
+      "advantage": -0.3036334449829077,
+      "baseline": -1.669987970652309
     },
     {
       "episode": 74,
       "scenario_id": "train_009",
-      "makespan": 91.96283835448844,
+      "makespan": 110.78594261387977,
       "lower_bound": 79.70007395862612,
-      "normalized_return": -1.1538613929295494,
-      "advantage": 0.37394685021908547,
-      "baseline": -1.4904135581267264
+      "normalized_return": -1.3900356312265272,
+      "advantage": 0.2799523394257819,
+      "baseline": -1.641992736709731
     },
     {
       "episode": 75,
       "scenario_id": "train_004",
-      "makespan": 106.77820758124393,
+      "makespan": 115.83076355470098,
       "lower_bound": 63.48008949834726,
-      "normalized_return": -1.6820739924133843,
-      "advantage": -0.1916604342866579,
-      "baseline": -1.5095796015553922
+      "normalized_return": -1.8246786428635502,
+      "advantage": -0.1826859061538193,
+      "baseline": -1.660261327325113
     },
     {
       "episode": 76,
       "scenario_id": "train_019",
-      "makespan": 86.41757439871934,
+      "makespan": 71.20053552433092,
       "lower_bound": 40.01580561203488,
-      "normalized_return": -2.159586020498085,
-      "advantage": -0.6500064189426928,
-      "baseline": -1.5745802434496616
+      "normalized_return": -1.7793103108966806,
+      "advantage": -0.11904898357156757,
+      "baseline": -1.6721662256822698
     },
     {
       "episode": 77,
       "scenario_id": "train_001",
-      "makespan": 117.48446886564246,
+      "makespan": 161.3309189931033,
       "lower_bound": 82.65891633747557,
-      "normalized_return": -1.4213163451838988,
-      "advantage": 0.1532638982657628,
-      "baseline": -1.5592538536230853
+      "normalized_return": -1.951766683396014,
+      "advantage": -0.2796004577137441,
+      "baseline": -1.700126271453644
     },
     {
       "episode": 78,
       "scenario_id": "train_009",
-      "makespan": 109.1846805669697,
+      "makespan": 138.25489851097876,
       "lower_bound": 79.70007395862612,
-      "normalized_return": -1.3699445325941557,
-      "advantage": 0.1893093210289296,
-      "baseline": -1.5403229215201923
+      "normalized_return": -1.734689714124351,
+      "advantage": -0.03456344267070688,
+      "baseline": -1.7035826157207148
     },
     {
       "episode": 79,
       "scenario_id": "train_017",
-      "makespan": 83.8090502561545,
+      "makespan": 90.63558166152158,
       "lower_bound": 46.50296625801874,
-      "normalized_return": -1.802230201642307,
-      "advantage": -0.2619072801221147,
-      "baseline": -1.566513649532404
+      "normalized_return": -1.9490279643374973,
+      "advantage": -0.24544534861678247,
+      "baseline": -1.7281271505823932
     },
     {
       "episode": 80,
       "scenario_id": "train_008",
-      "makespan": 90.878193081367,
+      "makespan": 131.4649024148197,
       "lower_bound": 56.90773834193919,
-      "normalized_return": -1.5969391110803057,
-      "advantage": -0.030425461547901822,
-      "baseline": -1.569556195687194
+      "normalized_return": -2.310141050148434,
+      "advantage": -0.5820138995660409,
+      "baseline": -1.7863285405389973
     }
   ],
   "behavior_cloning": {
+    "bc_teacher": "lookahead_heft",
     "bc_updates": 825,
-    "bc_match_rate": 0.5527272727272727
+    "bc_match_rate": 1.0
   },
   "hyperparameters": {
     "episodes": 80,
     "bc_epochs": 3,
+    "teacher_policy": "lookahead_heft",
+    "inference_mode": "rollout_safe",
+    "rollout_top_k": 4,
     "hidden_size": 32,
     "learning_rate": 0.018,
     "bc_learning_rate": 0.03,

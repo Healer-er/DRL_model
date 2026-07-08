@@ -41,6 +41,9 @@
   "training": {
     "episodes": 80,
     "bc_epochs": 3,
+    "teacher_policy": "lookahead_heft",
+    "inference_mode": "rollout_safe",
+    "rollout_top_k": 4,
     "hidden_size": 32,
     "learning_rate": 0.018,
     "bc_learning_rate": 0.03,
@@ -48,6 +51,6 @@
     "advantage_clip": 3.0
   },
   "evaluation": {
-    "policies": ["heft", "random", "rl"]
+    "policies": ["heft", "lookahead_heft", "portfolio", "max_min", "random", "rl"]
   }
 }

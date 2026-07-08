@@ -13,6 +13,7 @@ from typing import Any, Dict, List, Tuple
 
 from .env import SchedulingEnv
 from .policies.heft import HEFTScheduler
+from .policies.lookahead_heft import LookaheadHEFTScheduler
 from .policies.rl_policy import MLPActorScheduler
 from .utils import clamp, mean, write_json
 
@@ -32,13 +33,22 @@ def _run_policy_episode(scenario, scheduler) -> Tuple[float, List[Dict[str, obje
     return env.makespan, decisions
 
 
-def _behavior_clone(policy, scenarios, epochs, learning_rate) -> Dict[str, float]:
+def _build_teacher(name):
+    normalized = str(name or "heft").strip().lower()
+    if normalized == "heft":
+        return HEFTScheduler()
+    if normalized in ("lookahead_heft", "lookahead-heft", "rollout_heft", "rollout-heft"):
+        return LookaheadHEFTScheduler()
+    raise ValueError("Unknown behavior cloning teacher: %s" % name)
+
+
+def _behavior_clone(policy, scenarios, epochs, learning_rate, teacher_name="heft") -> Dict[str, float]:
     """用 HEFT 作为专家进行行为克隆预训练。
 
     每一步让学生策略在同一合法动作集合中提高 HEFT 所选动作的概率。
     这样 RL 初始策略不会完全随机，训练方差更小。
     """
-    teacher = HEFTScheduler()
+    teacher = _build_teacher(teacher_name)
     updates = 0
     exact_matches = 0
     total = 0
@@ -60,7 +70,11 @@ def _behavior_clone(policy, scenarios, epochs, learning_rate) -> Dict[str, float
                 env.step(action)
                 updates += 1
                 total += 1
-    return {"bc_updates": updates, "bc_match_rate": exact_matches / float(max(1, total))}
+    return {
+        "bc_teacher": teacher.name,
+        "bc_updates": updates,
+        "bc_match_rate": exact_matches / float(max(1, total)),
+    }
 
 
 def policy_feature_batch(env):
@@ -78,6 +92,8 @@ def train_rl(config: Dict[str, Any], train_scenarios, model_path: str, log_path:
     policy = MLPActorScheduler(
         hidden_size=int(training["hidden_size"]),
         seed=seed + 23,
+        inference_mode=training.get("inference_mode", "rollout_safe"),
+        rollout_top_k=int(training.get("rollout_top_k", 4)),
     )
 
     # 第一阶段：模仿 HEFT，获得合理的初始策略。
@@ -86,6 +102,7 @@ def train_rl(config: Dict[str, Any], train_scenarios, model_path: str, log_path:
         train_scenarios,
         epochs=int(training["bc_epochs"]),
         learning_rate=float(training["bc_learning_rate"]),
+        teacher_name=training.get("teacher_policy", "heft"),
     )
 
     log = {

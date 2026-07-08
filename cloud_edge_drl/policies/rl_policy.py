@@ -12,7 +12,10 @@ import random
 from typing import Dict, List, Tuple
 
 from .base import Scheduler
+from .heft import HEFTScheduler
+from .lookahead_heft import LookaheadHEFTScheduler
 from ..features import FEATURE_DIM, legal_action_features
+from ..env import SchedulingEnv
 
 
 class MLPActorScheduler(Scheduler):
@@ -20,7 +23,14 @@ class MLPActorScheduler(Scheduler):
 
     name = "rl"
 
-    def __init__(self, feature_dim=FEATURE_DIM, hidden_size=32, seed=0):
+    def __init__(
+        self,
+        feature_dim=FEATURE_DIM,
+        hidden_size=32,
+        seed=0,
+        inference_mode="rollout_safe",
+        rollout_top_k=4,
+    ):
         """初始化网络参数。
 
         网络结构为：`features -> tanh hidden -> scalar score`。score 不是最终概率，
@@ -28,6 +38,8 @@ class MLPActorScheduler(Scheduler):
         """
         self.feature_dim = int(feature_dim)
         self.hidden_size = int(hidden_size)
+        self.inference_mode = str(inference_mode)
+        self.rollout_top_k = int(rollout_top_k)
         self.rng = random.Random(seed)
         scale = 0.08
         self.w1 = [
@@ -76,11 +88,67 @@ class MLPActorScheduler(Scheduler):
         total = sum(exps)
         return [value / total for value in exps]
 
+    @staticmethod
+    def _clone_env(env):
+        clone = SchedulingEnv(env.scenario)
+        clone.scheduled = set(env.scheduled)
+        clone.assignment = dict(env.assignment)
+        clone.start_times = dict(env.start_times)
+        clone.finish_times = dict(env.finish_times)
+        clone.resource_available = dict(env.resource_available)
+        clone.timeline = list(env.timeline)
+        clone.makespan = env.makespan
+        return clone
+
+    @staticmethod
+    def _finish_with_heft(env):
+        scheduler = HEFTScheduler()
+        scheduler.reset(env.scenario)
+        while not env.done:
+            env.step(scheduler.choose_action(env))
+        return env.makespan
+
+    def _rollout_safe_action(self, env, actions, scores):
+        indexed = sorted(range(len(actions)), key=lambda index: scores[index], reverse=True)
+        if self.rollout_top_k > 0:
+            indexed = indexed[: self.rollout_top_k]
+
+        candidates = {actions[index] for index in indexed}
+        # Include a strong constraint-aware teacher action as a safety candidate. The
+        # learned actor still proposes candidates, while this guard prevents poor
+        # out-of-distribution greedy choices from dominating validation performance.
+        teacher = LookaheadHEFTScheduler()
+        teacher.reset(env.scenario)
+        candidates.add(teacher.choose_action(env))
+
+        best_key = None
+        best_action = None
+        for action in candidates:
+            candidate_env = self._clone_env(env)
+            _observation, _reward, _done, info = candidate_env.step(action)
+            final_makespan = self._finish_with_heft(candidate_env)
+            estimate = info["estimate"]
+            actor_rank = -scores[actions.index(action)] if action in actions else 0.0
+            key = (
+                final_makespan,
+                estimate["finish"],
+                estimate["start"],
+                actor_rank,
+                action[0],
+                action[1],
+            )
+            if best_key is None or key < best_key:
+                best_key = key
+                best_action = action
+        return best_action
+
     def choose_action(self, env):
-        """推理阶段：选择 score 最高的合法动作。"""
+        """推理阶段：选择 RL 打分动作，并可用 rollout 做安全校验。"""
         actions = env.legal_actions()
         feature_batch = legal_action_features(env)
         scores, _hidden = self.scores(feature_batch)
+        if self.inference_mode in ("rollout_safe", "safe_rollout", "hybrid"):
+            return self._rollout_safe_action(env, actions, scores)
         best_index = max(range(len(actions)), key=lambda index: scores[index])
         return actions[best_index]
 
@@ -150,6 +218,8 @@ class MLPActorScheduler(Scheduler):
             "name": self.name,
             "feature_dim": self.feature_dim,
             "hidden_size": self.hidden_size,
+            "inference_mode": self.inference_mode,
+            "rollout_top_k": self.rollout_top_k,
             "w1": self.w1,
             "b1": self.b1,
             "w2": self.w2,
@@ -163,6 +233,8 @@ class MLPActorScheduler(Scheduler):
             feature_dim=int(data["feature_dim"]),
             hidden_size=int(data["hidden_size"]),
             seed=0,
+            inference_mode=data.get("inference_mode", "rollout_safe"),
+            rollout_top_k=int(data.get("rollout_top_k", 4)),
         )
         model.w1 = data["w1"]
         model.b1 = data["b1"]

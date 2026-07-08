@@ -8,7 +8,7 @@
 
 ### `run_all.py`
 
-一键运行入口。默认执行 `generate -> train -> evaluate` 全流程，生成训练集和验证集、训练 RL 模型、评测 HEFT/随机/RL 策略，并产出 `results/summary.json` 与 `results/details.csv`。
+一键运行入口。默认执行 `generate -> train -> evaluate` 全流程，生成训练集和验证集、训练 RL 模型，评测 HEFT、lookahead HEFT、portfolio、max-min、随机和 RL 策略，并产出 `results/summary.json` 与 `results/details.csv`。
 
 ### `requirements.txt`
 
@@ -88,13 +88,25 @@ HEFT 风格启发式基线。计算任务 upward rank，在每一步选择 rank 
 
 随机合法动作基线。从 `env.legal_actions()` 中随机选择动作，用于检查环境、mask 和评测流程是否正常，也可作为性能下界参考。
 
+### `cloud_edge_drl/policies/lookahead_heft.py`
+
+rollout 增强 HEFT 策略。枚举当前所有合法动作，先执行候选动作，再用 HEFT 补全剩余任务，选择最终 makespan 最低的动作。
+
+### `cloud_edge_drl/policies/classic.py`
+
+经典异构调度启发式集合。当前包含 `MinMinScheduler` 和 `MaxMinScheduler`，用于扩展赛题中的外部调度方法对比。
+
+### `cloud_edge_drl/policies/portfolio.py`
+
+组合策略。离线运行 HEFT、lookahead HEFT、min-min 和 max-min，选择完整计划 makespan 最低的策略轨迹执行。
+
 ### `cloud_edge_drl/policies/rl_policy.py`
 
-纯 Python 两层 MLP Actor。对每个合法动作提取特征并打分，只在合法动作集合上做 softmax、采样或贪心选择；支持行为克隆和 REINFORCE 更新，并能保存/加载 JSON 模型。
+纯 Python 两层 MLP Actor。对每个合法动作提取特征并打分，只在合法动作集合上做 softmax 与采样；支持行为克隆和 REINFORCE 更新，并能保存/加载 JSON 模型。默认推理使用 `rollout_safe` 模式，将 MLP 高分动作与 rollout 教师动作一起做 HEFT 补全校验，避免轻量模型在未见场景上做出明显差于 HEFT 的贪心选择。
 
 ### `cloud_edge_drl/policies/registry.py`
 
-策略工厂。根据字符串创建 `heft`、`random`、`rl` 或 `module:ClassName` 自定义策略，使评测脚本无需关心具体类名和构造细节。
+策略工厂。根据字符串创建 `heft`、`lookahead_heft`、`portfolio`、`min_min`、`max_min`、`random`、`rl` 或 `module:ClassName` 自定义策略，使评测脚本无需关心具体类名和构造细节。
 
 ## 文档
 
@@ -120,11 +132,15 @@ Linux 一键运行脚本。适用于 openEuler、openKylin 以及其他常见 Li
 
 Windows PowerShell 一键运行脚本，便于当前开发环境直接复现实验。
 
+### `scripts/evaluate_complex.py`
+
+复杂场景泛化验证脚本。使用默认配置训练 RL 模型，再在 `configs/complex.json` 定义的更大 DAG、更密依赖和更多资源场景上评估各策略，并写入 `results/complex/`。
+
 ## 测试
 
 ### `tests/smoke_test.py`
 
-无需 pytest 的最小自检脚本。会生成快速模式场景、训练一个小模型、评测 HEFT 与 RL，并断言 summary 中包含必要指标。
+无需 pytest 的最小自检脚本。会生成快速模式场景、训练一个小模型、评测 HEFT、lookahead HEFT 与 RL，并断言 summary 中包含必要指标且 RL 不差于 HEFT。
 
 ## 运行时输出目录
 

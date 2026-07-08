@@ -38,8 +38,11 @@ class Scheduler:
 内置策略：
 
 - `HEFTScheduler`：外部启发式基线，按 upward rank 选 ready task，再选 earliest finish resource。
+- `LookaheadHEFTScheduler`：枚举当前合法动作，执行一步后用 HEFT 补全剩余调度，选择最终 makespan 最小的动作。
+- `PortfolioScheduler`：离线运行 HEFT、lookahead HEFT、min-min、max-min，选择完整 makespan 最低的计划执行。
+- `MaxMinScheduler` / `MinMinScheduler`：经典异构调度启发式基线。
 - `RandomScheduler`：随机合法动作基线。
-- `MLPActorScheduler`：两层 MLP Actor，使用 action masking。
+- `MLPActorScheduler`：两层 MLP Actor，使用 action masking；默认推理模式为 `rollout_safe`，即 MLP 先给合法动作打分，再对高分候选和 rollout 教师动作做 HEFT 补全校验，选择补全 makespan 最低的动作。
 
 评测还支持 `module:ClassName` 加载用户自定义策略。
 
@@ -54,10 +57,11 @@ advantage = return - moving_baseline
 
 训练流程包括两阶段：
 
-1. 行为克隆预热：用 HEFT 产生专家动作，更新 MLP 使其优先选择 HEFT 动作。
+1. 行为克隆预热：默认用 `lookahead_heft` 产生专家动作，更新 MLP 使其优先选择强启发式动作。
 2. Masked REINFORCE：在训练场景上采样合法动作，按 episode advantage 更新策略。
+3. Rollout-safe 推理：评估时不直接采用 MLP 贪心动作，而是用 learned score 形成候选集合，并保留 `lookahead_heft` 安全候选，再以 HEFT 补全后的最终 makespan 作为推理选择依据。
 
-这样既能保证初始策略不完全随机，也保留了 RL 对场景分布继续优化的空间。
+这样既能保证初始策略不完全随机，也保留了 RL 对场景分布继续优化的空间，同时避免轻量 MLP 在未见复杂场景上出现明显差于 HEFT 的贪心决策。
 
 ## 评估指标
 
@@ -72,3 +76,5 @@ mean_ratio = mean(policy_makespan / HEFT_makespan)
 ## 复现设置
 
 随机种子、任务规模、资源数量、速度范围、带宽矩阵和训练超参均在 `configs/default.json` 中配置。默认配置会分别生成训练集与验证集，验证集使用不同随机种子偏移，避免训练和评测场景重合。
+
+复杂泛化验证使用 `configs/complex.json` 与 `scripts/evaluate_complex.py`。复杂配置提高任务数量、依赖密度、资源数量和跨节点通信压力，用于检查策略是否只对默认小规模场景过拟合。

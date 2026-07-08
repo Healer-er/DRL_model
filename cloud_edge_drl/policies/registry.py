@@ -8,7 +8,10 @@ import importlib
 import importlib.util
 import os
 
+from .classic import MaxMinScheduler, MinMinScheduler
 from .heft import HEFTScheduler
+from .lookahead_heft import LookaheadHEFTScheduler
+from .portfolio import PortfolioScheduler
 from .random_policy import RandomScheduler
 from .rl_policy import MLPActorScheduler
 
@@ -39,6 +42,14 @@ def build_scheduler(spec, model_path=None, seed=0):
     lowered = normalized.lower()
     if lowered == "heft":
         return HEFTScheduler()
+    if lowered in ("lookahead_heft", "lookahead-heft", "rollout_heft", "rollout-heft"):
+        return LookaheadHEFTScheduler()
+    if lowered in ("min_min", "min-min", "minmin"):
+        return MinMinScheduler()
+    if lowered in ("max_min", "max-min", "maxmin"):
+        return MaxMinScheduler()
+    if lowered == "portfolio":
+        return PortfolioScheduler()
     if lowered == "random":
         return RandomScheduler(seed=seed)
     if lowered == "rl":
