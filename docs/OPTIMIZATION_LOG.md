@@ -161,3 +161,59 @@ report=results\generalization_smoke\report.md
 - 增加甘特图、箱线图和策略对比图，用于答辩演示和测试报告。
 - 增加配置 schema 校验和更完整的异常输入测试。
 - 在 openEuler 24.03-LTS-SP3 环境执行完整复现验证。
+
+## 2026-07-13 第 2 次优化：新增可视化报告与 SVG 甘特图
+
+### 背景与目标
+
+- 当前问题：`summary.json` 和 `details.csv` 能满足机器评测，但不适合现场答辩直接展示；评委很难从纯表格中直观看到任务在云、边、端资源上的排布差异。
+- 优化目标：在不引入第三方依赖的前提下，自动生成 Markdown 报告和 SVG 甘特图，用于展示不同策略在同一验证场景下的任务时间线与 makespan 差异。
+- 对应赛题评分点：演示效果、文档质量、性能分析可解释性、工程可用性。
+
+### 修改内容
+
+- 新增 `scripts/generate_visual_report.py`：
+  - 重跑指定策略并捕获每个策略的 `timeline`。
+  - 聚合生成策略排名表。
+  - 自动选择提升最明显的验证场景，或通过 `--scenario-id` 指定场景。
+  - 为选定场景下的每个策略生成 SVG 甘特图。
+  - 输出 `report.md`、`summary.json`、`details.csv`、`timelines.json`。
+- 新增 `docs/VISUAL_REPORT_GUIDE.md`：
+  - 记录默认配置、复杂配置、指定策略、指定场景的运行命令。
+  - 说明每个输出文件的用途。
+  - 给出答辩材料中如何对比 HEFT、`rl_bc_only`、`rl_greedy`、`rl` 的建议。
+
+### 验证方式
+
+- 推荐执行命令：
+
+```bash
+python scripts\generate_visual_report.py --config configs/default.json
+```
+
+- 预期输出：
+
+```text
+report=results\visual_report\report.md
+charts=<策略数量>
+```
+
+- 需要检查的文件：
+
+```text
+results/visual_report/report.md
+results/visual_report/timelines.json
+results/visual_report/gantt_<scenario>_<policy>.svg
+```
+
+### 结果与影响
+
+- 性能结果：该优化不改变调度算法本身，不影响 `mean_ratio`。
+- 工程影响：新增独立可视化脚本，不改变主评测入口和 `evaluate.py` 的输出格式。
+- 文档/演示价值：可以直接在答辩 PPT 或测试报告中展示甘特图，说明 RL/rollout-safe 策略在具体场景中如何改变任务分配和完成时间。
+
+### 后续 TODO
+
+- 增加箱线图或 SVG 柱状图，展示多 seed 下的 `mean_ratio` 分布。
+- 在正式完整结果上生成一版 `results/visual_report/` 并纳入提交材料。
+- 对真实工作流 DAG 增加专门的甘特图展示案例。

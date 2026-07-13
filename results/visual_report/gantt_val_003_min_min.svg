@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1048" height="316" viewBox="0 0 1048 316">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="24" y="28" font-family="Arial" font-size="18" font-weight="700" fill="#111827">val_003 - min_min</text>
+<line x1="120" y1="38" x2="1020" y2="38" stroke="#9ca3af" stroke-width="1"/>
+<text x="24" y="73" font-family="Arial" font-size="13" fill="#111827">c0 (cloud)</text>
+<line x1="120" y1="88" x2="1020" y2="88" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="120" y1="30" x2="120" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="110" y="300" font-family="Arial" font-size="10" fill="#6b7280">0.0</text>
+<line x1="300" y1="30" x2="300" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="290" y="300" font-family="Arial" font-size="10" fill="#6b7280">18.5</text>
+<line x1="480" y1="30" x2="480" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="470" y="300" font-family="Arial" font-size="10" fill="#6b7280">37.0</text>
+<line x1="660" y1="30" x2="660" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="650" y="300" font-family="Arial" font-size="10" fill="#6b7280">55.5</text>
+<line x1="840" y1="30" x2="840" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="830" y="300" font-family="Arial" font-size="10" fill="#6b7280">74.0</text>
+<line x1="1020" y1="30" x2="1020" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="1010" y="300" font-family="Arial" font-size="10" fill="#6b7280">92.6</text>
+<rect x="102" y="65" width="10" height="10" rx="2" fill="#2563eb"/>
+<text x="24" y="117" font-family="Arial" font-size="13" fill="#111827">e0 (edge)</text>
+<line x1="120" y1="132" x2="1020" y2="132" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="120" y1="30" x2="120" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="110" y="300" font-family="Arial" font-size="10" fill="#6b7280">0.0</text>
+<line x1="300" y1="30" x2="300" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="290" y="300" font-family="Arial" font-size="10" fill="#6b7280">18.5</text>
+<line x1="480" y1="30" x2="480" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="470" y="300" font-family="Arial" font-size="10" fill="#6b7280">37.0</text>
+<line x1="660" y1="30" x2="660" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="650" y="300" font-family="Arial" font-size="10" fill="#6b7280">55.5</text>
+<line x1="840" y1="30" x2="840" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="830" y="300" font-family="Arial" font-size="10" fill="#6b7280">74.0</text>
+<line x1="1020" y1="30" x2="1020" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="1010" y="300" font-family="Arial" font-size="10" fill="#6b7280">92.6</text>
+<rect x="102" y="109" width="10" height="10" rx="2" fill="#059669"/>
+<text x="24" y="161" font-family="Arial" font-size="13" fill="#111827">e1 (edge)</text>
+<line x1="120" y1="176" x2="1020" y2="176" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="120" y1="30" x2="120" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="110" y="300" font-family="Arial" font-size="10" fill="#6b7280">0.0</text>
+<line x1="300" y1="30" x2="300" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="290" y="300" font-family="Arial" font-size="10" fill="#6b7280">18.5</text>
+<line x1="480" y1="30" x2="480" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="470" y="300" font-family="Arial" font-size="10" fill="#6b7280">37.0</text>
+<line x1="660" y1="30" x2="660" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="650" y="300" font-family="Arial" font-size="10" fill="#6b7280">55.5</text>
+<line x1="840" y1="30" x2="840" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="830" y="300" font-family="Arial" font-size="10" fill="#6b7280">74.0</text>
+<line x1="1020" y1="30" x2="1020" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="1010" y="300" font-family="Arial" font-size="10" fill="#6b7280">92.6</text>
+<rect x="102" y="153" width="10" height="10" rx="2" fill="#059669"/>
+<text x="24" y="205" font-family="Arial" font-size="13" fill="#111827">d0 (device)</text>
+<line x1="120" y1="220" x2="1020" y2="220" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="120" y1="30" x2="120" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="110" y="300" font-family="Arial" font-size="10" fill="#6b7280">0.0</text>
+<line x1="300" y1="30" x2="300" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="290" y="300" font-family="Arial" font-size="10" fill="#6b7280">18.5</text>
+<line x1="480" y1="30" x2="480" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="470" y="300" font-family="Arial" font-size="10" fill="#6b7280">37.0</text>
+<line x1="660" y1="30" x2="660" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="650" y="300" font-family="Arial" font-size="10" fill="#6b7280">55.5</text>
+<line x1="840" y1="30" x2="840" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="830" y="300" font-family="Arial" font-size="10" fill="#6b7280">74.0</text>
+<line x1="1020" y1="30" x2="1020" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="1010" y="300" font-family="Arial" font-size="10" fill="#6b7280">92.6</text>
+<rect x="102" y="197" width="10" height="10" rx="2" fill="#d97706"/>
+<text x="24" y="249" font-family="Arial" font-size="13" fill="#111827">d1 (device)</text>
+<line x1="120" y1="264" x2="1020" y2="264" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="120" y1="30" x2="120" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="110" y="300" font-family="Arial" font-size="10" fill="#6b7280">0.0</text>
+<line x1="300" y1="30" x2="300" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="290" y="300" font-family="Arial" font-size="10" fill="#6b7280">18.5</text>
+<line x1="480" y1="30" x2="480" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="470" y="300" font-family="Arial" font-size="10" fill="#6b7280">37.0</text>
+<line x1="660" y1="30" x2="660" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="650" y="300" font-family="Arial" font-size="10" fill="#6b7280">55.5</text>
+<line x1="840" y1="30" x2="840" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="830" y="300" font-family="Arial" font-size="10" fill="#6b7280">74.0</text>
+<line x1="1020" y1="30" x2="1020" y2="282" stroke="#f3f4f6" stroke-width="1"/>
+<text x="1010" y="300" font-family="Arial" font-size="10" fill="#6b7280">92.6</text>
+<rect x="102" y="241" width="10" height="10" rx="2" fill="#d97706"/>
+<rect x="120.00" y="57" width="130.61" height="24" rx="4" fill="#2563eb" opacity="0.86"/>
+<text x="125.00" y="73" font-family="Arial" font-size="11" fill="#ffffff">T6</text>
+<rect x="250.61" y="57" width="160.78" height="24" rx="4" fill="#2563eb" opacity="0.86"/>
+<text x="255.61" y="73" font-family="Arial" font-size="11" fill="#ffffff">T1</text>
+<rect x="411.39" y="57" width="27.80" height="24" rx="4" fill="#2563eb" opacity="0.86"/>
+<text x="416.39" y="73" font-family="Arial" font-size="11" fill="#ffffff">T5</text>
+<rect x="439.19" y="57" width="104.74" height="24" rx="4" fill="#2563eb" opacity="0.86"/>
+<text x="444.19" y="73" font-family="Arial" font-size="11" fill="#ffffff">T4</text>
+<rect x="543.93" y="57" width="95.86" height="24" rx="4" fill="#2563eb" opacity="0.86"/>
+<text x="548.93" y="73" font-family="Arial" font-size="11" fill="#ffffff">T2</text>
+<rect x="639.79" y="57" width="112.86" height="24" rx="4" fill="#2563eb" opacity="0.86"/>
+<text x="644.79" y="73" font-family="Arial" font-size="11" fill="#ffffff">T8</text>
+<rect x="752.65" y="57" width="117.86" height="24" rx="4" fill="#2563eb" opacity="0.86"/>
+<text x="757.65" y="73" font-family="Arial" font-size="11" fill="#ffffff">T3</text>
+<rect x="870.52" y="57" width="149.48" height="24" rx="4" fill="#2563eb" opacity="0.86"/>
+<text x="875.52" y="73" font-family="Arial" font-size="11" fill="#ffffff">T9</text>
+<rect x="120.00" y="101" width="391.35" height="24" rx="4" fill="#059669" opacity="0.86"/>
+<text x="125.00" y="117" font-family="Arial" font-size="11" fill="#ffffff">T0</text>
+<rect x="641.06" y="101" width="363.44" height="24" rx="4" fill="#059669" opacity="0.86"/>
+<text x="646.06" y="117" font-family="Arial" font-size="11" fill="#ffffff">T10</text>
+<rect x="416.12" y="145" width="368.69" height="24" rx="4" fill="#059669" opacity="0.86"/>
+<text x="421.12" y="161" font-family="Arial" font-size="11" fill="#ffffff">T7</text>
+</svg>
