@@ -51,6 +51,6 @@
     "advantage_clip": 3.0
   },
   "evaluation": {
-    "policies": ["heft", "lookahead_heft", "portfolio", "max_min", "random", "rl"]
+    "policies": ["heft", "lookahead_heft", "portfolio", "min_min", "max_min", "mct", "met", "olb", "random", "rl_bc_only", "rl_greedy", "rl"]
   }
 }

@@ -1,536 +1,128 @@
 {
   "summary": {
     "heft": {
-      "count": 10,
-      "mean_makespan": 82.62259681067576,
-      "std_makespan": 16.771771124655658,
+      "count": 4,
+      "mean_makespan": 52.15467357295138,
+      "std_makespan": 10.446747723056703,
       "mean_ratio": 1.0,
       "std_ratio": 0.0
     },
     "lookahead_heft": {
-      "count": 10,
-      "mean_makespan": 80.59965027697159,
-      "std_makespan": 15.786524337916486,
-      "mean_ratio": 0.9776842440984597,
-      "std_ratio": 0.032772279693314414
-    },
-    "portfolio": {
-      "count": 10,
-      "mean_makespan": 80.59965027697159,
-      "std_makespan": 15.786524337916486,
-      "mean_ratio": 0.9776842440984597,
-      "std_ratio": 0.032772279693314414
-    },
-    "max_min": {
-      "count": 10,
-      "mean_makespan": 89.26420288094963,
-      "std_makespan": 20.019847585755755,
-      "mean_ratio": 1.0817386958284243,
-      "std_ratio": 0.1087626018597863
-    },
-    "random": {
-      "count": 10,
-      "mean_makespan": 371.95972517240386,
-      "std_makespan": 121.13992758508671,
-      "mean_ratio": 4.687611178548205,
-      "std_ratio": 1.9906102051690069
+      "count": 4,
+      "mean_makespan": 47.8403087123006,
+      "std_makespan": 11.130520019035654,
+      "mean_ratio": 0.9138009241615989,
+      "std_ratio": 0.05857459167552081
     },
     "rl": {
-      "count": 10,
-      "mean_makespan": 80.59965027697159,
-      "std_makespan": 15.786524337916486,
-      "mean_ratio": 0.9776842440984597,
-      "std_ratio": 0.032772279693314414
+      "count": 4,
+      "mean_makespan": 47.8403087123006,
+      "std_makespan": 11.130520019035654,
+      "mean_ratio": 0.9138009241615989,
+      "std_ratio": 0.05857459167552081
     }
   },
   "ranked_policies": [
     "lookahead_heft",
-    "portfolio",
     "rl",
-    "heft",
-    "max_min",
-    "random"
+    "heft"
   ],
   "records": [
     {
       "scenario_id": "val_000",
       "policy": "heft",
-      "makespan": 79.58407300962179,
-      "heft_makespan": 79.58407300962179,
+      "makespan": 46.705695827796276,
+      "heft_makespan": 46.705695827796276,
       "ratio_to_heft": 1.0,
-      "steps": 11
+      "steps": 9
     },
     {
       "scenario_id": "val_001",
       "policy": "heft",
-      "makespan": 100.66332242677494,
-      "heft_makespan": 100.66332242677494,
+      "makespan": 60.029638927859416,
+      "heft_makespan": 60.029638927859416,
       "ratio_to_heft": 1.0,
-      "steps": 12
+      "steps": 6
     },
     {
       "scenario_id": "val_002",
       "policy": "heft",
-      "makespan": 61.78868175946538,
-      "heft_makespan": 61.78868175946538,
+      "makespan": 40.15385171470763,
+      "heft_makespan": 40.15385171470763,
       "ratio_to_heft": 1.0,
-      "steps": 9
+      "steps": 6
     },
     {
       "scenario_id": "val_003",
       "policy": "heft",
-      "makespan": 91.55093011690428,
-      "heft_makespan": 91.55093011690428,
-      "ratio_to_heft": 1.0,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_004",
-      "policy": "heft",
-      "makespan": 64.30679139241461,
-      "heft_makespan": 64.30679139241461,
+      "makespan": 61.7295078214422,
+      "heft_makespan": 61.7295078214422,
       "ratio_to_heft": 1.0,
       "steps": 9
-    },
-    {
-      "scenario_id": "val_005",
-      "policy": "heft",
-      "makespan": 108.09022541189509,
-      "heft_makespan": 108.09022541189509,
-      "ratio_to_heft": 1.0,
-      "steps": 12
-    },
-    {
-      "scenario_id": "val_006",
-      "policy": "heft",
-      "makespan": 80.93177377957683,
-      "heft_makespan": 80.93177377957683,
-      "ratio_to_heft": 1.0,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_007",
-      "policy": "heft",
-      "makespan": 98.55507283875329,
-      "heft_makespan": 98.55507283875329,
-      "ratio_to_heft": 1.0,
-      "steps": 10
-    },
-    {
-      "scenario_id": "val_008",
-      "policy": "heft",
-      "makespan": 78.81879514349355,
-      "heft_makespan": 78.81879514349355,
-      "ratio_to_heft": 1.0,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_009",
-      "policy": "heft",
-      "makespan": 61.93630222785779,
-      "heft_makespan": 61.93630222785779,
-      "ratio_to_heft": 1.0,
-      "steps": 8
     },
     {
       "scenario_id": "val_000",
       "policy": "lookahead_heft",
-      "makespan": 79.58407300962179,
-      "heft_makespan": 79.58407300962179,
-      "ratio_to_heft": 1.0,
-      "steps": 11
+      "makespan": 42.02711402195051,
+      "heft_makespan": 46.705695827796276,
+      "ratio_to_heft": 0.8998284529772197,
+      "steps": 9
     },
     {
       "scenario_id": "val_001",
       "policy": "lookahead_heft",
-      "makespan": 100.66332242677494,
-      "heft_makespan": 100.66332242677494,
+      "makespan": 60.029638927859416,
+      "heft_makespan": 60.029638927859416,
       "ratio_to_heft": 1.0,
-      "steps": 12
+      "steps": 6
     },
     {
       "scenario_id": "val_002",
       "policy": "lookahead_heft",
-      "makespan": 61.06005400028422,
-      "heft_makespan": 61.78868175946538,
-      "ratio_to_heft": 0.9882077471402027,
-      "steps": 9
+      "makespan": 35.46080820086169,
+      "heft_makespan": 40.15385171470763,
+      "ratio_to_heft": 0.8831234535807443,
+      "steps": 6
     },
     {
       "scenario_id": "val_003",
       "policy": "lookahead_heft",
-      "makespan": 83.18182463311476,
-      "heft_makespan": 91.55093011690428,
-      "ratio_to_heft": 0.9085852489635796,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_004",
-      "policy": "lookahead_heft",
-      "makespan": 64.30679139241461,
-      "heft_makespan": 64.30679139241461,
-      "ratio_to_heft": 1.0,
+      "makespan": 53.843673698530786,
+      "heft_makespan": 61.7295078214422,
+      "ratio_to_heft": 0.8722517900884315,
       "steps": 9
-    },
-    {
-      "scenario_id": "val_005",
-      "policy": "lookahead_heft",
-      "makespan": 106.65373239194642,
-      "heft_makespan": 108.09022541189509,
-      "ratio_to_heft": 0.9867102412408274,
-      "steps": 12
-    },
-    {
-      "scenario_id": "val_006",
-      "policy": "lookahead_heft",
-      "makespan": 80.93177377957683,
-      "heft_makespan": 80.93177377957683,
-      "ratio_to_heft": 1.0,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_007",
-      "policy": "lookahead_heft",
-      "makespan": 92.12150051187709,
-      "heft_makespan": 98.55507283875329,
-      "ratio_to_heft": 0.934721043356112,
-      "steps": 10
-    },
-    {
-      "scenario_id": "val_008",
-      "policy": "lookahead_heft",
-      "makespan": 75.55712839624745,
-      "heft_makespan": 78.81879514349355,
-      "ratio_to_heft": 0.9586181602838756,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_009",
-      "policy": "lookahead_heft",
-      "makespan": 61.93630222785779,
-      "heft_makespan": 61.93630222785779,
-      "ratio_to_heft": 1.0,
-      "steps": 8
-    },
-    {
-      "scenario_id": "val_000",
-      "policy": "portfolio",
-      "makespan": 79.58407300962179,
-      "heft_makespan": 79.58407300962179,
-      "ratio_to_heft": 1.0,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_001",
-      "policy": "portfolio",
-      "makespan": 100.66332242677494,
-      "heft_makespan": 100.66332242677494,
-      "ratio_to_heft": 1.0,
-      "steps": 12
-    },
-    {
-      "scenario_id": "val_002",
-      "policy": "portfolio",
-      "makespan": 61.06005400028422,
-      "heft_makespan": 61.78868175946538,
-      "ratio_to_heft": 0.9882077471402027,
-      "steps": 9
-    },
-    {
-      "scenario_id": "val_003",
-      "policy": "portfolio",
-      "makespan": 83.18182463311476,
-      "heft_makespan": 91.55093011690428,
-      "ratio_to_heft": 0.9085852489635796,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_004",
-      "policy": "portfolio",
-      "makespan": 64.30679139241461,
-      "heft_makespan": 64.30679139241461,
-      "ratio_to_heft": 1.0,
-      "steps": 9
-    },
-    {
-      "scenario_id": "val_005",
-      "policy": "portfolio",
-      "makespan": 106.65373239194642,
-      "heft_makespan": 108.09022541189509,
-      "ratio_to_heft": 0.9867102412408274,
-      "steps": 12
-    },
-    {
-      "scenario_id": "val_006",
-      "policy": "portfolio",
-      "makespan": 80.93177377957683,
-      "heft_makespan": 80.93177377957683,
-      "ratio_to_heft": 1.0,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_007",
-      "policy": "portfolio",
-      "makespan": 92.12150051187709,
-      "heft_makespan": 98.55507283875329,
-      "ratio_to_heft": 0.934721043356112,
-      "steps": 10
-    },
-    {
-      "scenario_id": "val_008",
-      "policy": "portfolio",
-      "makespan": 75.55712839624745,
-      "heft_makespan": 78.81879514349355,
-      "ratio_to_heft": 0.9586181602838756,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_009",
-      "policy": "portfolio",
-      "makespan": 61.93630222785779,
-      "heft_makespan": 61.93630222785779,
-      "ratio_to_heft": 1.0,
-      "steps": 8
-    },
-    {
-      "scenario_id": "val_000",
-      "policy": "max_min",
-      "makespan": 83.11473615594005,
-      "heft_makespan": 79.58407300962179,
-      "ratio_to_heft": 1.0443639413364958,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_001",
-      "policy": "max_min",
-      "makespan": 100.66332242677494,
-      "heft_makespan": 100.66332242677494,
-      "ratio_to_heft": 1.0,
-      "steps": 12
-    },
-    {
-      "scenario_id": "val_002",
-      "policy": "max_min",
-      "makespan": 68.9816921665453,
-      "heft_makespan": 61.78868175946538,
-      "ratio_to_heft": 1.1164130744054597,
-      "steps": 9
-    },
-    {
-      "scenario_id": "val_003",
-      "policy": "max_min",
-      "makespan": 104.53118718430953,
-      "heft_makespan": 91.55093011690428,
-      "ratio_to_heft": 1.1417818153330648,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_004",
-      "policy": "max_min",
-      "makespan": 84.31422213001905,
-      "heft_makespan": 64.30679139241461,
-      "ratio_to_heft": 1.311124693121673,
-      "steps": 9
-    },
-    {
-      "scenario_id": "val_005",
-      "policy": "max_min",
-      "makespan": 128.63065670656565,
-      "heft_makespan": 108.09022541189509,
-      "ratio_to_heft": 1.1900304233467731,
-      "steps": 12
-    },
-    {
-      "scenario_id": "val_006",
-      "policy": "max_min",
-      "makespan": 80.93177377957683,
-      "heft_makespan": 80.93177377957683,
-      "ratio_to_heft": 1.0,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_007",
-      "policy": "max_min",
-      "makespan": 103.98100763565972,
-      "heft_makespan": 98.55507283875329,
-      "ratio_to_heft": 1.0550548504568997,
-      "steps": 10
-    },
-    {
-      "scenario_id": "val_008",
-      "policy": "max_min",
-      "makespan": 75.55712839624745,
-      "heft_makespan": 78.81879514349355,
-      "ratio_to_heft": 0.9586181602838756,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_009",
-      "policy": "max_min",
-      "makespan": 61.93630222785779,
-      "heft_makespan": 61.93630222785779,
-      "ratio_to_heft": 1.0,
-      "steps": 8
-    },
-    {
-      "scenario_id": "val_000",
-      "policy": "random",
-      "makespan": 456.57788183592345,
-      "heft_makespan": 79.58407300962179,
-      "ratio_to_heft": 5.737050952151227,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_001",
-      "policy": "random",
-      "makespan": 237.56952391990754,
-      "heft_makespan": 100.66332242677494,
-      "ratio_to_heft": 2.360040560877788,
-      "steps": 12
-    },
-    {
-      "scenario_id": "val_002",
-      "policy": "random",
-      "makespan": 286.09522920120304,
-      "heft_makespan": 61.78868175946538,
-      "ratio_to_heft": 4.630220633528506,
-      "steps": 9
-    },
-    {
-      "scenario_id": "val_003",
-      "policy": "random",
-      "makespan": 394.26759111348565,
-      "heft_makespan": 91.55093011690428,
-      "ratio_to_heft": 4.306538345487401,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_004",
-      "policy": "random",
-      "makespan": 297.1842268041237,
-      "heft_makespan": 64.30679139241461,
-      "ratio_to_heft": 4.621350566079999,
-      "steps": 9
-    },
-    {
-      "scenario_id": "val_005",
-      "policy": "random",
-      "makespan": 427.2868350273057,
-      "heft_makespan": 108.09022541189509,
-      "ratio_to_heft": 3.9530571187085686,
-      "steps": 12
-    },
-    {
-      "scenario_id": "val_006",
-      "policy": "random",
-      "makespan": 346.24884201599406,
-      "heft_makespan": 80.93177377957683,
-      "ratio_to_heft": 4.278280653517199,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_007",
-      "policy": "random",
-      "makespan": 482.0182570611271,
-      "heft_makespan": 98.55507283875329,
-      "ratio_to_heft": 4.890851816930427,
-      "steps": 10
-    },
-    {
-      "scenario_id": "val_008",
-      "policy": "random",
-      "makespan": 200.74729885214558,
-      "heft_makespan": 78.81879514349355,
-      "ratio_to_heft": 2.546947063662609,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_009",
-      "policy": "random",
-      "makespan": 591.6015658928227,
-      "heft_makespan": 61.93630222785779,
-      "ratio_to_heft": 9.551774074538331,
-      "steps": 8
     },
     {
       "scenario_id": "val_000",
       "policy": "rl",
-      "makespan": 79.58407300962179,
-      "heft_makespan": 79.58407300962179,
-      "ratio_to_heft": 1.0,
-      "steps": 11
+      "makespan": 42.02711402195051,
+      "heft_makespan": 46.705695827796276,
+      "ratio_to_heft": 0.8998284529772197,
+      "steps": 9
     },
     {
       "scenario_id": "val_001",
       "policy": "rl",
-      "makespan": 100.66332242677494,
-      "heft_makespan": 100.66332242677494,
+      "makespan": 60.029638927859416,
+      "heft_makespan": 60.029638927859416,
       "ratio_to_heft": 1.0,
-      "steps": 12
+      "steps": 6
     },
     {
       "scenario_id": "val_002",
       "policy": "rl",
-      "makespan": 61.06005400028422,
-      "heft_makespan": 61.78868175946538,
-      "ratio_to_heft": 0.9882077471402027,
-      "steps": 9
+      "makespan": 35.46080820086169,
+      "heft_makespan": 40.15385171470763,
+      "ratio_to_heft": 0.8831234535807443,
+      "steps": 6
     },
     {
       "scenario_id": "val_003",
       "policy": "rl",
-      "makespan": 83.18182463311476,
-      "heft_makespan": 91.55093011690428,
-      "ratio_to_heft": 0.9085852489635796,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_004",
-      "policy": "rl",
-      "makespan": 64.30679139241461,
-      "heft_makespan": 64.30679139241461,
-      "ratio_to_heft": 1.0,
+      "makespan": 53.843673698530786,
+      "heft_makespan": 61.7295078214422,
+      "ratio_to_heft": 0.8722517900884315,
       "steps": 9
-    },
-    {
-      "scenario_id": "val_005",
-      "policy": "rl",
-      "makespan": 106.65373239194642,
-      "heft_makespan": 108.09022541189509,
-      "ratio_to_heft": 0.9867102412408274,
-      "steps": 12
-    },
-    {
-      "scenario_id": "val_006",
-      "policy": "rl",
-      "makespan": 80.93177377957683,
-      "heft_makespan": 80.93177377957683,
-      "ratio_to_heft": 1.0,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_007",
-      "policy": "rl",
-      "makespan": 92.12150051187709,
-      "heft_makespan": 98.55507283875329,
-      "ratio_to_heft": 0.934721043356112,
-      "steps": 10
-    },
-    {
-      "scenario_id": "val_008",
-      "policy": "rl",
-      "makespan": 75.55712839624745,
-      "heft_makespan": 78.81879514349355,
-      "ratio_to_heft": 0.9586181602838756,
-      "steps": 11
-    },
-    {
-      "scenario_id": "val_009",
-      "policy": "rl",
-      "makespan": 61.93630222785779,
-      "heft_makespan": 61.93630222785779,
-      "ratio_to_heft": 1.0,
-      "steps": 8
     }
   ]
 }

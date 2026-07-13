@@ -23,10 +23,14 @@ def _paths(config: Dict[str, Any]) -> Dict[str, str]:
     }
 
 
+def _quick_enabled(args) -> bool:
+    return bool(getattr(args, "quick", False))
+
+
 def command_generate(args) -> int:
     """生成并保存训练/验证场景。"""
     config = load_config(args.config)
-    if args.quick:
+    if _quick_enabled(args):
         config = apply_quick_mode(config)
     ensure_output_dirs(config)
     train, val = generate_and_save(config)
@@ -37,7 +41,7 @@ def command_generate(args) -> int:
 def command_train(args) -> int:
     """读取训练场景并训练 RL 策略。"""
     config = load_config(args.config)
-    if args.quick:
+    if _quick_enabled(args):
         config = apply_quick_mode(config)
     ensure_output_dirs(config)
     train_path, _val_path = scenario_paths(config)
@@ -54,7 +58,7 @@ def command_train(args) -> int:
 def command_evaluate(args) -> int:
     """在验证集上评测指定策略列表。"""
     config = load_config(args.config)
-    if args.quick:
+    if _quick_enabled(args):
         config = apply_quick_mode(config)
     ensure_output_dirs(config)
     train_path, val_path = scenario_paths(config)
@@ -79,7 +83,7 @@ def command_evaluate(args) -> int:
 def command_run_all(args) -> int:
     """一键执行生成、训练和评测，是提交给评审的主入口。"""
     config = load_config(args.config)
-    if args.quick:
+    if _quick_enabled(args):
         config = apply_quick_mode(config)
     ensure_output_dirs(config)
     train, val = generate_and_save(config)
@@ -110,7 +114,12 @@ def build_parser() -> argparse.ArgumentParser:
     """
     common = argparse.ArgumentParser(add_help=False)
     common.add_argument("--config", default="configs/default.json", help="Path to JSON config")
-    common.add_argument("--quick", action="store_true", help="Run a tiny smoke-sized experiment")
+    common.add_argument(
+        "--quick",
+        action="store_true",
+        default=argparse.SUPPRESS,
+        help="Run a tiny smoke-sized experiment",
+    )
 
     parser = argparse.ArgumentParser(
         description="Cloud-edge-device DRL scheduler framework",

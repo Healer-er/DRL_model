@@ -104,6 +104,17 @@ def train_rl(config: Dict[str, Any], train_scenarios, model_path: str, log_path:
         learning_rate=float(training["bc_learning_rate"]),
         teacher_name=training.get("teacher_policy", "heft"),
     )
+    base, ext = os.path.splitext(model_path)
+    bc_model_path = "%s_bc_only%s" % (base, ext or ".json")
+    policy.save(
+        bc_model_path,
+        metadata={
+            "seed": seed,
+            "train_scenario_count": len(train_scenarios),
+            "algorithm": "behavior cloning only",
+            "bc_teacher": bc_stats["bc_teacher"],
+        },
+    )
 
     log = {
         "seed": seed,
