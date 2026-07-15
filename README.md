@@ -1,65 +1,167 @@
-# 基于深度强化学习的云-边-端异构计算资源管理调度框架
+# 基于深度强化学习的云-边-端异构资源调度框架
 
-本项目把任务 DAG、云/边/端异构资源、合法动作约束、调度策略接口、训练流程和评测指标拆成独立模块，评测脚本可以在同一组验证场景上统一比较 RL、HEFT、rollout 增强启发式、经典启发式、随机策略或用户自定义策略。
+本项目实现了一个纯 Python 的云-边-端任务调度实验框架，用于在同一组 DAG 任务场景上比较强化学习调度器、HEFT 系列启发式、经典启发式、随机策略和用户自定义策略。
 
-实现仅依赖 Python 标准库，便于在 openEuler、openKylin、OpenHarmony 兼容 Linux 环境及其他主流 Linux 发行版上运行。默认实现包含一个纯 Python 两层 MLP Actor，通过 rollout 增强 HEFT 行为克隆预热和 REINFORCE 策略梯度训练。训练阶段只在合法动作集合上采样，推理阶段采用 `rollout_safe` 模式：RL 给候选动作打分，同时用 HEFT 补全评估候选动作并保留 rollout 教师动作作为安全候选，从而降低分布外贪心决策风险。
+框架将任务 DAG、异构计算资源、通信代价、合法动作约束、策略接口、训练流程和评测指标拆分为独立模块。默认实现包含一个两层 MLP Actor，通过 lookahead HEFT 教师策略进行行为克隆预训练，再使用 REINFORCE 继续优化。RL 推理默认使用 `rollout_safe` 模式：模型为候选动作打分，同时由 rollout 教师评估候选动作并保留安全候选，从而降低贪心决策的分布外风险。
 
-## 一键运行
+项目不依赖第三方 Python 包，推荐使用 Python 3.8 及以上版本。
+
+## 快速开始
 
 ```bash
 python run_all.py --config configs/default.json
 ```
 
-该命令会自动完成：
+该命令会按顺序完成：
 
-1. 生成训练集与验证集场景；
-2. 使用 rollout 增强 HEFT 行为克隆预训练 RL 策略；
-3. 使用策略梯度继续训练；
-4. 在验证集上评测 `heft`、`lookahead_heft`、`portfolio`、`max_min`、`random`、`rl`；
-5. 输出 `results/summary.json` 和 `results/details.csv`。
+1. 生成训练集和验证集场景；
+2. 训练 RL 策略，并保存行为克隆阶段模型；
+3. 在验证集上评测默认策略列表；
+4. 输出模型、训练日志和评测结果。
 
-快速自检可运行：
+也可以使用模块入口：
+
+```bash
+python -m cloud_edge_drl.cli run-all --config configs/default.json
+```
+
+快速自检：
 
 ```bash
 python tests/smoke_test.py
 ```
 
-Linux 环境也可直接运行：
+运行环境正确性单元测试：
+
+```bash
+python -m unittest tests.test_env_correctness
+```
+
+Windows 和 Linux 脚本入口：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/run_windows.ps1
+```
 
 ```bash
 bash scripts/run_linux.sh
 ```
 
-复杂场景泛化验证可运行：
+## CLI 用法
+
+主入口 `cloud_edge_drl.cli` 支持以下子命令；不指定子命令时默认执行 `run-all`。
+
+```bash
+python -m cloud_edge_drl.cli generate --config configs/default.json
+python -m cloud_edge_drl.cli train --config configs/default.json
+python -m cloud_edge_drl.cli evaluate --config configs/default.json
+python -m cloud_edge_drl.cli run-all --config configs/default.json
+```
+
+常用参数：
+
+- `--config`：指定 JSON 配置文件，默认 `configs/default.json`。
+- `--quick`：运行更小规模的快速实验，适合本地冒烟测试。
+- `evaluate --policies`：用逗号分隔指定评测策略。
+- `evaluate --model`：指定 RL 模型路径。
+
+示例：
+
+```bash
+python -m cloud_edge_drl.cli evaluate --config configs/default.json --policies heft,lookahead_heft,rl
+python -m cloud_edge_drl.cli run-all --config configs/default.json --quick
+```
+
+## 内置策略
+
+默认评测策略来自 `configs/default.json`：
+
+- `heft`：基础 HEFT 调度器。
+- `lookahead_heft`：带一步前瞻/rollout 增强的 HEFT。
+- `portfolio`：组合式启发式策略。
+- `min_min`、`max_min`、`mct`、`met`、`olb`：经典调度启发式。
+- `random`：随机合法动作策略。
+- `rl_bc_only`：仅使用行为克隆模型的 RL 策略。
+- `rl_greedy`：使用训练后模型直接贪心推理。
+- `rl`：默认安全 rollout 推理模式。
+
+## 配置文件
+
+- `configs/default.json`：默认训练和验证设置。默认生成 24 个训练场景、10 个验证场景，每个 DAG 包含 8 到 14 个任务，资源包含 1 个 cloud、2 个 edge、2 个 device。
+- `configs/complex.json`：更复杂的泛化验证设置。默认生成 32 个训练场景、12 个验证场景，每个 DAG 包含 18 到 30 个任务，资源包含 2 个 cloud、4 个 edge、4 个 device。
+
+配置中主要包含：
+
+- `paths`：场景、模型、日志和结果目录。
+- `scenario`：DAG 数量、任务规模、依赖边概率、计算量和数据量范围。
+- `resources`：cloud、edge、device 数量、速度范围和跨资源带宽。
+- `training`：训练轮数、行为克隆轮数、教师策略、推理模式、隐藏层大小和学习率。
+- `evaluation`：默认评测策略列表。
+
+## 输出文件
+
+默认运行会生成或更新以下文件：
+
+- `artifacts/scenarios/train.json`：训练场景集。
+- `artifacts/scenarios/val.json`：验证场景集。
+- `artifacts/models/rl_policy.json`：完整训练后的 RL 策略参数。
+- `artifacts/models/rl_policy_bc_only.json`：行为克隆阶段策略参数。
+- `artifacts/training_log.json`：训练日志和关键指标。
+- `results/details.csv`：每个场景、每个策略的 makespan、HEFT makespan 和相对 HEFT 比值。
+- `results/summary.json`：聚合评测指标，包括 `mean_makespan`、`std_makespan`、`mean_ratio`、`std_ratio` 和样本数。
+
+复杂场景评测会输出到 `results/complex/`。
+
+## 复杂场景与泛化评测
+
+使用默认配置训练，并在复杂 held-out 场景上评测：
 
 ```bash
 python scripts/evaluate_complex.py
 ```
 
-## 输出说明
+运行多随机种子的泛化基准：
 
-- `artifacts/scenarios/train.json`：训练场景集。
-- `artifacts/scenarios/val.json`：验证场景集。
-- `artifacts/models/rl_policy.json`：训练得到的 RL 策略参数。
-- `artifacts/training_log.json`：训练曲线与关键超参。
-- `results/details.csv`：每个场景、每个策略的 makespan 和相对 HEFT 比值。
-- `results/summary.json`：聚合指标，包括 `mean_makespan`、`std_makespan`、`mean_ratio`、`std_ratio` 和样本数。
-- `results/complex/summary.json`：复杂 DAG 与更多资源条件下的泛化验证汇总。
+```bash
+python scripts/benchmark_generalization.py --config configs/default.json --seeds 2026,2027,2028
+```
 
-## 赛题要求对齐
+可选缩小规模：
 
-- 功能完整性：`run_all.py` 一键完成训练、验证评测和结果文件生成。
-- 模块化：`cloud_edge_drl/domain.py`、`scenario.py`、`env.py`、`policies/`、`train.py`、`evaluate.py` 分别负责数据、场景、环境、策略、训练、评测。
-- 插拔接口：所有策略实现 `Scheduler.choose_action(env)`；内置 HEFT、lookahead HEFT、portfolio、max-min、随机策略、RL 策略，并支持 `module:ClassName` 形式加载自定义策略。
-- 合法动作处理：环境只暴露 ready task 与资源组合；RL softmax 只在 legal actions 上归一化，非法动作在 `env.step` 中会被拒绝。
-- 性能指标：验证阶段输出 `mean_ratio = mean(policy_makespan / HEFT_makespan)`，并给出标准差与样本规模。
-- 性能优化：默认 `rl` 采用学习策略 + rollout 安全校验，在默认验证集和复杂验证集上均达到低于 HEFT 的 `mean_ratio`。
-- 泛化能力：配置文件把训练集和验证集分开生成，随机种子固定；`configs/complex.json` 提供更大 DAG、更密依赖和更多资源的未训练复杂验证集。
-- 文档质量：`docs/DESIGN.md` 解释建模、动作、奖励、训练和评估；`docs/FILE_OVERVIEW.md` 对每个文件做了详细说明。
+```bash
+python scripts/benchmark_generalization.py --train-count 8 --val-count 4 --episodes 20
+```
+
+该脚本会在 `results/generalization/` 下写入每个 seed 的结果，并生成：
+
+- `aggregate.json`：跨 seed 聚合数据。
+- `report.md`：按 `mean_ratio` 排序的 Markdown 报告。
+
+## 可视化报告
+
+生成 Markdown 报告和 SVG 甘特图：
+
+```bash
+python scripts/generate_visual_report.py --config configs/default.json
+```
+
+默认输出目录为 `results/visual_report/`，包含：
+
+- `report.md`：策略排序和甘特图索引。
+- `summary.json`：聚合指标。
+- `details.csv`：逐场景评测明细。
+- `timelines.json`：调度时间线。
+- `gantt_*.svg`：指定场景下各策略的甘特图。
+
+也可以指定策略、模型、场景或输出目录：
+
+```bash
+python scripts/generate_visual_report.py --policies heft,lookahead_heft,rl --scenario-id val_003
+```
 
 ## 自定义策略
 
-自定义策略只需继承或遵守 `Scheduler` 接口：
+自定义策略需要实现 `choose_action(env)`，并可选实现 `reset(scenario)`。`choose_action` 必须返回一个合法动作 `(task_id, resource_id)`。
 
 ```python
 class MyScheduler:
@@ -72,12 +174,39 @@ class MyScheduler:
         return env.legal_actions()[0]
 ```
 
-然后在评测时使用：
+评测时可以用 `module:ClassName` 或 `path/to/file.py:ClassName` 加载：
 
 ```bash
 python -m cloud_edge_drl.cli evaluate --config configs/default.json --policies heft,examples.custom_policy:FastestReadyScheduler
 ```
 
-## 目录说明
+## 项目结构
 
-详细文件级说明见 `docs/FILE_OVERVIEW.md`。
+```text
+cloud_edge_drl/
+  cli.py                  # 命令行入口
+  config.py               # 配置读取、quick 模式和目录初始化
+  domain.py               # Task、Edge、Resource、Scenario 等领域对象
+  env.py                  # 调度环境、合法动作和时间估计
+  scenario.py             # 场景生成、保存和读取
+  train.py                # RL 训练流程
+  evaluate.py             # 策略评测流程
+  metrics.py              # 指标聚合和排序
+  policies/               # 内置策略和策略注册表
+configs/                  # 默认与复杂场景配置
+scripts/                  # 批量评测、可视化和跨 seed 基准脚本
+tests/                    # 冒烟测试与环境正确性测试
+artifacts/                # 生成的场景、模型和训练日志
+results/                  # 评测结果和报告
+docs/OPTIMIZATION_LOG.md  # 优化记录
+```
+
+## 评测指标
+
+核心指标为：
+
+```text
+ratio_to_heft = policy_makespan / HEFT_makespan
+```
+
+`mean_ratio < 1.0` 表示该策略平均优于 HEFT，`mean_ratio = 1.0` 表示与 HEFT 持平。所有策略都通过同一个 `SchedulingEnv` 调度，环境只暴露当前 ready task 与资源组合，非法动作会在 `env.step` 中被拒绝。
